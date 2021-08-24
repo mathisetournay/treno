@@ -1,0 +1,93 @@
+.card-category-content {
+position: relative;
+width: 350px;
+height: 202px;
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0.13)), url(https://images.unsplash.com/photo-1511497584788-876760111969?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max);
+background-position: center;
+background-size: cover;
+filter: grayscale(20%);
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+
+}
+
+.chevron-2 {
+position: absolute;
+width: 20px;
+height: 20px;
+left: 167px;
+top: 179px;
+
+}
+
+.content {
+  position: relative;
+  height: 183px;
+  width: 350;
+  background-color: #FFFFFF;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+.title-content {
+
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  padding: 10px;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+
+  color: #243E53;
+
+}
+
+.subtitle-content {
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 19%;
+bottom: 0%;
+padding: 10px;
+
+font-family: Manrope;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 22px;
+
+color: #243E53;
+
+
+}
+
+.photo-content {
+
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  left: 296px;
+  top: 400px;
+
+  background: url('lesptitsgilets.png'), #FFFFFF;
+  border-radius: 5px;
+
+}
+
+.paragraph-content {
+position: absolute;
+left: 0%;
+right: 0%;
+top: 33%;
+bottom: 0%;
+padding: 10px;
+
+
+}
