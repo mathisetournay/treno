@@ -1,0 +1,80 @@
+.general-container {
+  width: 100vw;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+
+.card-asso {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0.13)), url(https://images.unsplash.com/photo-1511497584788-876760111969?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max);
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(20%);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  .asso-infos {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    padding: .5rem;
+
+    .position-title {
+      align-items: center;
+      place-self: end;
+      margin: 0 auto;
+      text-align: center;
+
+      h1, h2 {
+        margin: 0;
+      }
+    }
+
+    .collapse-btn {
+      justify-content: flex-end;
+      place-self: end;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  .content {
+    height: 5rem;
+    background-color: #FFFFFF;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    .asso-title-content {
+      padding: 10px;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 33px;
+      color: #243E53;
+    }
+
+    .asso-subtitle-content {
+      padding: 10px;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      color: #243E53;
+    }
+
+    .asso-photo-content {
+      width: 58px;
+      height: 58px;
+      background: url('lesptitsgilets.png'), #FFFFFF;
+      border-radius: 5px;
+    }
+
+    .asso-paragraph-content {
+      padding: 10px;
+    }
+  }
+}
