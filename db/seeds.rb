@@ -19,11 +19,11 @@ Donation.destroy_all
 puts 'Create nonprofit 1'
 
 forest = Nonprofit.new(
-  name: "",
-  sub_category: "",
-  description: "",
-  catchline: "",
-  website: ""
+  name: "Mini Big Forest",
+  sub_category: "Forest",
+  description: "Design of participatory urban forests with a high potential for biodiversity, greening, and social bonding.",
+  catchline: "Replanting trees",
+  website: "https://www.minibigforest.com/"
 )
 file = File.open(Rails.root.join('app/assets/images/forest.png'))
 forest.photo.attach(io: file, filename: 'forest.png', content_type: 'image/png')
@@ -33,11 +33,11 @@ puts "Done"
 puts 'Create nonprofit 2'
 
 ocean = Nonprofit.new(
-  name: "",
-  sub_category: "",
-  description: "",
-  catchline: "",
-  website: ""
+  name: "Ocean clean up",
+  sub_category: "Ocean",
+  description: "Development of advanced technologies to rid the ocean of plastic.",
+  catchline: "Cleaning the ocean",
+  website: "https://theoceancleanup.com/"
 )
 file = File.open(Rails.root.join('app/assets/images/ocean.png'))
 ocean.photo.attach(io: file, filename: 'ocean.png', content_type: 'image/png')
@@ -46,86 +46,86 @@ ocean.save!
 puts "Done"
 puts 'Create nonprofit 3'
 
-ocean = Nonprofit.new(
-  name: "",
-  sub_category: "",
-  description: "",
-  catchline: "",
-  website: ""
+global_warming = Nonprofit.new(
+  name: "Réseau Action Climat",
+  sub_category: "Global Warming",
+  description: "The Climate Action Network produces expertise and analyses on many issues: agriculture and food, waste, energy",
+  catchline: "Organizing the future",
+  website: "https://reseauactionclimat.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/ocean.png'))
-ocean.photo.attach(io: file, filename: 'ocean.png', content_type: 'image/png')
-ocean.save!
+file = File.open(Rails.root.join('app/assets/images/global-warming.png'))
+global_warming.photo.attach(io: file, filename: 'global-warming.png', content_type: 'image/png')
+global_warming.save!
 
 puts "Done"
 puts 'Create nonprofit 4'
 
-ocean = Nonprofit.new(
-  name: "",
-  sub_category: "",
-  description: "",
-  catchline: "",
-  website: ""
+sensibilization = Nonprofit.new(
+  name: "Makesense",
+  sub_category: "Sensibilization",
+  description: "Makesense creates tools and programmes for collective mobilisation to enable everyone to take action and build an inclusive and sustainable society.",
+  catchline: "Orchestrating the transition",
+  website: "https://makesense.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/ocean.png'))
-ocean.photo.attach(io: file, filename: 'ocean.png', content_type: 'image/png')
-ocean.save!
+file = File.open(Rails.root.join('app/assets/images/sensibilization.png'))
+sensibilization.photo.attach(io: file, filename: 'sensibilization.png', content_type: 'image/png')
+sensibilization.save!
 
 puts "Done"
 puts 'Create nonprofit 5'
 
-ocean = Nonprofit.new(
-  name: "",
-  sub_category: "",
-  description: "",
-  catchline: "",
-  website: ""
+agriculture = Nonprofit.new(
+  name: "Solidarité Paysans",
+  sub_category: "Agriculture",
+  description: "To accompany, defend families and preserve farmers' jobs",
+  catchline: "Helping farmers",
+  website: "https://solidaritepaysans.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/ocean.png'))
-ocean.photo.attach(io: file, filename: 'ocean.png', content_type: 'image/png')
-ocean.save!
+file = File.open(Rails.root.join('app/assets/images/agriculture.png'))
+agriculture.photo.attach(io: file, filename: 'agriculture.png', content_type: 'image/png')
+agriculture.save!
 
 puts "Done"
 puts 'Create nonprofit 6'
 
-ocean = Nonprofit.new(
-  name: "",
-  sub_category: "",
-  description: "",
-  catchline: "",
-  website: ""
+homeless = Nonprofit.new(
+  name: "Les P'tits Gilets",
+  sub_category: "Homeless",
+  description: "Les Ptits Gilets is an association that helps the homeless in Nantes by distributing food, hygiene products and basic necessities",
+  catchline: "Feeding the destitute",
+  website: "https://associationlesptitsgilets.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/ocean.png'))
-ocean.photo.attach(io: file, filename: 'ocean.png', content_type: 'image/png')
-ocean.save!
+file = File.open(Rails.root.join('app/assets/images/homeless.png'))
+homeless.photo.attach(io: file, filename: 'homeless.png', content_type: 'image/png')
+homeless.save!
 
 puts "Done"
 puts 'Create nonprofit 7'
 
-ocean = Nonprofit.new(
-  name: "",
-  sub_category: "",
-  description: "",
-  catchline: "",
-  website: ""
+elderly_people = Nonprofit.new(
+  name: "Fonds Eugénie",
+  sub_category: "Elderly people",
+  description: "The Eugenie Endowment Fund supports our elders to reduce the feeling of exclusion that old age and disability can cause.",
+  catchline: "Listening seniors",
+  website: "https://fonds-eugenie.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/ocean.png'))
-ocean.photo.attach(io: file, filename: 'ocean.png', content_type: 'image/png')
-ocean.save!
+file = File.open(Rails.root.join('app/assets/images/elderly-people.png'))
+elderly_people.photo.attach(io: file, filename: 'elderly-people.png', content_type: 'image/png')
+elderly_people.save!
 
 puts "Done"
 puts 'Create nonprofit 8'
 
-ocean = Nonprofit.new(
-  name: "",
-  sub_category: "",
-  description: "",
-  catchline: "",
-  website: ""
+disability = Nonprofit.new(
+  name: "Handi'Chiens",
+  sub_category: "Disability",
+  description: "Handi'Chiens is an association that trains dogs for children with autistic disorders. The aim is to stimulate, awaken and soothe the children",
+  catchline: "Supporting the disabled",
+  website: "https://handichiens.org/?gclid=Cj0KCQjwsZKJBhC0ARIsAJ96n3W3Idko_6-hUNiP3qzCDnQaUspEniKDyjzwBNpe6lRrdpJLHOWeXGcaAhfEEALw_wcB"
 )
-file = File.open(Rails.root.join('app/assets/images/ocean.png'))
-ocean.photo.attach(io: file, filename: 'ocean.png', content_type: 'image/png')
-ocean.save!
+file = File.open(Rails.root.join('app/assets/images/disability.png'))
+disability.photo.attach(io: file, filename: 'disability.png', content_type: 'image/png')
+disability.save!
 
 puts "Done"
 puts 'Create nonprofit 9'
