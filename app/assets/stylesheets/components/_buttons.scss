@@ -21,3 +21,16 @@
   font-size: 24px;
   border: none;
 }
+
+.btn-add-avatar {
+  background: $gradiant_blue;
+  border-radius: 100px;
+  position: absolute;
+  font-family: $body-font;
+  font-weight: bold;
+  width: 200px;
+  height: 80px;
+  left: 18px;
+  top: 344px;
+  border: none;
+}
