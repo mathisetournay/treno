@@ -1,23 +1,19 @@
 .card-subcategory {
   width: 100vw;
-  height: 185px;
-  background-color: $blue_gray;
-  filter: grayscale(60%);
-  margin-right: 10px;
+  padding: 2rem;
+  background-color: $dark_blue;
+
 
 
   .position-title-sub {
-      padding: 25px 0px 0px 25px;
+
     h2 {
       font-weight: 800;
+      margin-bottom: 1.5rem;
     }
 
   }
-  .position-picture-sub {
-    padding: 10px 0px 0px 25px;
 
-
-  }
 
 
 }

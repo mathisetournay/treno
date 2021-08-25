@@ -13,6 +13,7 @@ $light-gray: #F4F4F4;
 
 $blue: #5AA9E6;
 $light_blue: #7FC8F8;
+$dark_blue: rgba(0, 0, 0, 0.349);
 $pink: #FF6392;
 $yellow: #FFE45E;
 $navy: #11629F;
@@ -22,4 +23,5 @@ $green: #4DBEA3;
 $red: #BD4C4C;
 $white: #FFFFFF;
 $pink_to_yellow: linear-gradient(90deg, $pink 16.25%, $yellow 89%);
+$pink_to_yellow_text: -webkit-linear-gradient(90deg, $pink 16.25%, $yellow 89%);
 $gradiant_blue: linear-gradient(90deg, $light_blue 0%, $navy 100%);
