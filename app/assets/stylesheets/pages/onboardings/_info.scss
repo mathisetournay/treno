@@ -4,4 +4,19 @@
 
 .info {
   background-color: black;
+  padding: 5rem 1rem;
+}
+
+.informations {
+  background-color: #11629F;
+  border-radius: 20px;
+  padding: 2rem;
+
+  img {
+    position: unset;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+  }
 }
