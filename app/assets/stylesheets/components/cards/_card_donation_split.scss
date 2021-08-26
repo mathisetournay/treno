@@ -1,0 +1,36 @@
+.donation-grid {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: $dark_blue;
+  align-items: center;
+  .association-logo {
+    img {
+      width: 70px;
+      height: 70px;
+      // background-position: center;
+      // background-size: cover;
+      border-radius: 10px;
+    }
+  }
+
+  .association-name {
+    font-weight: 800;
+  }
+
+  .donation {
+    label {
+      align-self: center;
+      display: block;
+      font: 1rem $body-font, sans-serif;
+    }
+
+    input,
+    label {
+     margin: .4rem 0;
+    }
+    input {
+      width: 4rem;
+    }
+  }
+}

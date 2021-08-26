@@ -1,0 +1,28 @@
+.card-dashboard-home {
+  width: 100vw;
+  background-color: $dark_blue;
+  padding: 1.5rem 2rem;
+
+
+  .price-home {
+
+    background: $pink_to_yellow_text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0;
+  }
+
+
+  .picture-home {
+
+
+    img  {
+      width: 70px;
+      height: 70px;
+    }
+
+
+  }
+
+
+}
