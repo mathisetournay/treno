@@ -1,6 +1,8 @@
-<h1>Hi Simon nice to meet you!</h1>
-<h2>What do you care about?</h2>
-<ul>
-  <%= f.input :category, :collection => ["Environment", "Animals", "Culture", "Solidarity", "Health", "Humanitarian", "Living Together", "Sport", "Employment", "Education"], :include_blank => "Anything", wrapper_html: { class: 'form-group' }, :as => :check_boxes, include_hidden: false, :input_html => {:name => "categories[]", :multiple => true} %>
-</ul>
-<button>continue</button>
+<div class="divsize">
+  <h1>Hi Simon nice to meet you!</h1>
+  <h2>What do you care about?</h2>
+  <ul>
+    <%= f.input :category, :collection => ["Environment", "Animals", "Culture", "Solidarity", "Health", "Humanitarian", "Living Together", "Sport", "Employment", "Education"], :include_blank => "Anything", wrapper_html: { class: 'form-group' }, :as => :check_boxes, include_hidden: false, :input_html => {:name => "categories[]", :multiple => true} %>
+  </ul>
+  <button>continue</button>
+</div>
