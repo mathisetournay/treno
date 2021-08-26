@@ -5,8 +5,13 @@
   background-image: $pink_to_yellow;
   position: sticky;
   bottom: 0;
-  h1 {
-    align-items: center;
+
+  .btn {
+    font-family: $body-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 130%;
   }
   img {
     width: 35px;

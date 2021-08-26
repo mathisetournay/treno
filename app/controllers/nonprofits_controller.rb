@@ -5,9 +5,18 @@ class NonprofitsController < ApplicationController
     @nonprofits = Nonprofit.all
   end
 
+  # def create
+  #   @nonprofit = Nonnonprofit.new(nonprofit_params)
+  #   @nonprofits.save!
+  # end
+
   private
 
   def set_nonprofit
-    @nonprofits = Nonprofits.find(params[:id])
+    @nonprofit = Nonprofit.find(param[:id])
   end
+
+  # def nonprofit_params
+  #   params.require(:nonprofit).permit()
+  # end
 end

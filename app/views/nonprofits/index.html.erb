@@ -17,14 +17,15 @@
                       wrapper_html: { class: "form-group" },
                       include_hidden: false,
                       input_html: { name: "categories[]", multiple: true, class: "uncheckedboxes tag-selector"},
-                      label_method: lambda { |nonprofit| render 'nonprofits', nonprofit: nonprofit }
-                      %>
+                      label_method: lambda { |nonprofit| render 'nonprofits', nonprofit: nonprofit }%>
+
+</div>
+                      <div class="user-banner-donation">
+                        <%= f.button :submit, "Donate()"%>
+                      </div>
   <%end%>
 
 
-</div>
 <%# <%if tag-selector.checked? > 0 %> %>
-  <div class="user-banner-donation">
-    <h1>Donate()</h1>
-  </div>
+
   <%# <%end%> %>
