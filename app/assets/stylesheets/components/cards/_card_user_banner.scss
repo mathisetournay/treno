@@ -1,0 +1,15 @@
+.user-banner-donation {
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  background-image: $pink_to_yellow;
+  position: sticky;
+  bottom: 0;
+  h1 {
+    align-items: center;
+  }
+  img {
+    width: 35px;
+    height: 35px;
+  }
+}
