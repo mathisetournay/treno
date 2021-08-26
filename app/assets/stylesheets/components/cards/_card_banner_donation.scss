@@ -1,0 +1,25 @@
+.card-banner-donation {
+  width: 20vw;
+  height: 40px;
+  background-color: #E5E5E5;
+  border-radius: 1rem;
+  display: grid;
+
+  .position-number-budget {
+    width: 100%;
+    height: 100%;
+    padding: .5rem;
+    align-items: center;
+    place-self: center;
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+      margin: 0;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 130%;
+    }
+  }
+}
