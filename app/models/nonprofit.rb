@@ -18,4 +18,10 @@ class Nonprofit < ApplicationRecord
 
   has_many :donations
   validates :sub_category, inclusion: { in: SUB_CATEGORIES }
+
+  def category
+    categories.find { |key, values|
+      values.include?(nonprofit.sub_category)
+    }.first
+  end
 end
