@@ -186,16 +186,16 @@ bees.save!
 puts "Done"
 puts 'Create nonprofit 13'
 
-aniamals_shelters = Nonprofit.new(
+animals_shelters = Nonprofit.new(
   name: "SPA",
-  sub_category: "Animal Shelters",
+  sub_category: "Animals Shelters",
   description: " The SPA acts daily to ensure the protection and defence of animals throughout the country.",
   catchline: "Protecting animals",
   website: "https://www.la-spa.fr/"
 )
-file = File.open(Rails.root.join('app/assets/images/aniamals-shelters.png'))
-aniamals_shelters.photo.attach(io: file, filename: 'aniamals-shelters.png', content_type: 'image/png')
-aniamals_shelters.save!
+file = File.open(Rails.root.join('app/assets/images/animals-shelters.png'))
+animals_shelters.photo.attach(io: file, filename: 'animals-shelters.png', content_type: 'image/png')
+animals_shelters.save!
 
 puts "Done"
 puts 'Create nonprofit 14'
@@ -225,4 +225,8 @@ file = File.open(Rails.root.join('app/assets/images/endangered-species.png'))
 endangered_species.photo.attach(io: file, filename: 'endangered-species.png', content_type: 'image/png')
 endangered_species.save!
 
+puts "All nonprofits generated"
+
 # Created Nonprofits
+
+# Create User
