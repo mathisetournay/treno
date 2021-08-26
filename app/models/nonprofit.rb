@@ -20,8 +20,13 @@ class Nonprofit < ApplicationRecord
   validates :sub_category, inclusion: { in: SUB_CATEGORIES }
 
   def category
-    categories.find { |key, values|
-      values.include?(nonprofit.sub_category)
-    }.first
+    search_category = CATEGORIES.find do |_, values|
+      values.include?(sub_category)
+    end
+    search_category.first
+  end
+
+  def sub_category_image_path
+    sub_category.downcase.split.join("-") + '.png'
   end
 end
