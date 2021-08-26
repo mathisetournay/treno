@@ -1,4 +1,4 @@
-<div class="divsize">
+<div class="divsize subcategory">
   <h1>Simon tell us more!</h1>
   <h2>Make your choice!</h2>
   <%= f.input :Environment, :collection => ["Forest", "Ocean", "Global Warming", "Sensibilization", "Agriculture"], :include_blank => "Anything", wrapper_html: { class: 'form-group' }, :as => :check_boxes, include_hidden: false, :input_html => {name: "user[favorite_sub_categories][]", multiple: true} %>
