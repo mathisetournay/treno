@@ -1,18 +1,13 @@
 <div class="container d-flex justify-content-center align-items-center">
-  <div class="col-6">
-
-
-
-    <%= simple_form_for :user, url: onboarding_path do |f| %>
-      <div class=“form-inputs”>
-        <%= render "name", user: @user, f: f %>
-        <%= render "category", user: @user, f: f %>
-        <%= render "subcategory", user: @user, f: f %>
-        <%= render "info", user: @user, f: f  %>
-        <%= render "budget", user: @user, f: f %>
-        <%= render "registration", user: @user, f: f %>
-      </div>
-    <% end %>
+  <%= simple_form_for :user, url: onboarding_path do |f| %>
+    <div class=“form-inputs”>
+      <%= render "name", user: @user, f: f %>
+      <%= render "category", user: @user, f: f %>
+      <%= render "subcategory", user: @user, f: f %>
+      <%= render "info", user: @user, f: f  %>
+      <%= render "budget", user: @user, f: f %>
+      <%= render "registration", user: @user, f: f %>
+    </div>
+  <% end %>
     <!-- chargement -->
-  </div>
 </div>
