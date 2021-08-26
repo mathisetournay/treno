@@ -1,0 +1,15 @@
+.user-menu-grid {
+  padding: 1rem 2rem;
+  // display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  background-color: $blue;
+  // align-items: center;
+  .menu-logo {
+    img {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}
