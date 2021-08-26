@@ -1,6 +1,10 @@
 class OnboardingsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:new, :create]
 
+  def new
+    @categories = Nonprofit::CATEGORIES.keys
+  end
+
   def create
     @user = User.new(user_params)
     @user.save!
