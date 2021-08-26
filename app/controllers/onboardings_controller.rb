@@ -3,7 +3,7 @@ class OnboardingsController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.save
+    @user.save!
   end
 
   private
