@@ -4,4 +4,70 @@
 
 .budget {
   background-color: orange;
+  padding: 2rem;
+  position: relative;
+  .center {
+    text-align: center;
+    border-radius: 20px;
+    img {
+      position: unset;
+      align-items: center;
+      width: 200px;
+      height: 200px;
+      margin-bottom: 15px;
+    }
+  }
+  .form-group {
+    display: flex;
+    align-content: space-between;
+    background-color: white;
+    border-radius: 20px;
+    .string {
+      color: $blue;
+      padding-left: 8px;
+      width: 240px;
+      padding-top: 6px;
+    }
+    .form-control {
+      width: 60px;
+      text-align: end;
+    }
+  }
+
+  .input {
+    width: 320px;
+    text-align: end;
+    #user_donnation_budget {
+      text-align: right;
+    }
+  }
+
+  .donation_cost {
+    display: flex;
+    align-content: space-between;
+    border-radius: 20px;
+    .wide {
+      width: 256px;
+    }
+  }
+  .donation_suggestions {
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    // margin-left: 16px;
+    // margin-right: 16px;
+    .money {
+      width: 56px;
+      border-radius: 20px;
+      color: $blue;
+      padding: 16px 4px;
+      background-color: $grey;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+  .btn {
+    position: absolute;
+    bottom: 24px;
+  }
 }
