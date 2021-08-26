@@ -1,80 +1,18 @@
 <div class="container d-flex justify-content-center align-items-center">
   <div class="col-6">
 
-    <h1 class=“text-center”>Welcome to Tréno</h1>
-    <h2 class=“text-center”>What do you friends call you ?</h2>
+
 
     <%= simple_form_for :user, url: onboarding_path do |f| %>
       <div class=“form-inputs”>
-      <%= f.input :first_name, input_html: { value: nil } %>
-
-        <h2 class=“text-center”>What do you care about?</h2>
-
-        <ul>
-          <%= f.input :category, :collection => ["Environment", "Animals", "Culture", "Solidarity", "Health", "Humanitarian", "Living Together", "Sport", "Employment", "Education"], :include_blank => "Anything", wrapper_html: { class: 'form-group' }, :as => :check_boxes, include_hidden: false, :input_html => {:name => "categories[]", :multiple => true} %>
-        </ul>
-
+        <%= render "name", user: @user, f: f %>
+        <%= render "category", user: @user, f: f %>
+        <%= render "subcategory", user: @user, f: f %>
+        <%= render "info", user: @user, f: f  %>
+        <%= render "budget", user: @user, f: f %>
+        <%= render "registration", user: @user, f: f %>
       </div>
-
-      <%= f.input :Environment, :collection => ["Forest", "Ocean", "Global Warming", "Sensibilization", "Agriculture"], :include_blank => "Anything", wrapper_html: { class: 'form-group' }, :as => :check_boxes, include_hidden: false, :input_html => {name: "user[favorite_sub_categories][]", multiple: true} %>
-      <%= f.input :Solidarity, :collection => ["Homeless", "Elderly People", "Disability", "Orphans", "Refugees"], :include_blank => "Anything", wrapper_html: { class: 'form-group' }, :as => :check_boxes, include_hidden: false, :input_html => {name: "user[favorite_sub_categories][]", multiple: true} %>
-      <%= f.input :Animals, :collection => ["Birds", "Bees", "Animals Shelters", "Biodiversity", "Endangered Species"], :include_blank => "Anything", wrapper_html: { class: 'form-group' }, :as => :check_boxes, include_hidden: false, :input_html => {name: "user[favorite_sub_categories][]", multiple: true} %>
-
-
-    <h1 class=“text-center”>Simon tell us your budget !</h1>
-    <img>
-    <%= f.input :donation_budget, input_html: { value: 8 } %>
-
-
-    <!-- chargement -->
-
-    <img>
-
-    <h1 class=“text-center”>Simon you are almost done!</h1>
-
-    <div class="form-inputs">
-      <%= f.input :email,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" }%>
-      <%= f.input :password,
-                  required: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
-                  required: true,
-                  input_html: { autocomplete: "new-password" } %>
-    </div>
-
-
-    <%= f.submit 'Register'%> <!-- Redirect to or Link to ? go to => INDEX -->
-
     <% end %>
-
+    <!-- chargement -->
   </div>
 </div>
-
-
-<!-- <p>Already have an account ? Log in ></p> -->
-<!--  -->
-<!-- <h1 class=“text-center”>Hi Simon nice to meet you!</h1> -->
-<!-- <h1 class=“text-center”>Simon tell us more!</h1> -->
-<!--  <h2 class=“text-center”>Make your choice!</h2> -->
-<!-- <h1 class=“text-center”>Simon you are in the right place</h1>
-<div>
-<img>
-<p>each month, 5 nonprofits will be suggested to you according to your preferences</p>
-<p>90% of Treno users commit to donating an average of 8€ per month </p>
-</div> -->
-
-<!-- <p>The real cost of your donation</p>
-    <p>2,72€</p>
-    <button>5€</button>
-    <button>20€</button>
-    <button>50€</button>
-    <button>100€</button>
-    <button>500€</button> -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
