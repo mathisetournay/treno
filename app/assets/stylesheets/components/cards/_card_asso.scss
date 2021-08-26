@@ -16,7 +16,7 @@
     flex-direction: column;
     justify-content: space-between;
     border-radius: 1rem;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0.13)), url(https://images.unsplash.com/photo-1511497584788-876760111969?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max);
+
     background-position: center;
     background-size: cover;
     filter: grayscale(20%);
@@ -94,6 +94,7 @@
     .asso-paragraph-content {
       margin-top: 10px;
       padding: 10px;
+      color: $navy;
     }
   }
 }

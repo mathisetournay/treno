@@ -18,4 +18,15 @@ class Nonprofit < ApplicationRecord
 
   has_many :donations
   validates :sub_category, inclusion: { in: SUB_CATEGORIES }
+
+  def category
+    search_category = CATEGORIES.find do |_, values|
+      values.include?(sub_category)
+    end
+    search_category.first
+  end
+
+  def sub_category_image_path
+    sub_category.downcase.split.join("-") + '.png'
+  end
 end
