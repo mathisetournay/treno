@@ -9,10 +9,10 @@
 # Initialisation seeds
 
 puts "Clear DB"
-User.destroy_all
 Nonprofit.destroy_all
 DonationSession.destroy_all
 Donation.destroy_all
+User.destroy_all
 
 # Creation Nonprofits
 
@@ -104,7 +104,7 @@ puts 'Create nonprofit 7'
 
 elderly_people = Nonprofit.new(
   name: "Fonds Eugénie",
-  sub_category: "Elderly people",
+  sub_category: "Elderly People",
   description: "The Eugenie Endowment Fund supports our elders to reduce the feeling of exclusion that old age and disability can cause.",
   catchline: "Listening seniors",
   website: "https://fonds-eugenie.org/"
