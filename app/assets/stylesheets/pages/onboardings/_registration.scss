@@ -3,5 +3,22 @@
 }
 
 .registration {
-  background-color: red;
+  // background-color: red;
+  .text-center {
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+  .form-inputs {
+    .final_form_input
+     {
+      width: 80%;
+      border-radius: 20px;
+      color: $blue;
+      margin-bottom: 5rem;
+      padding: 16px 4px;
+      background-color: $grey;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
 }
