@@ -1,7 +1,13 @@
 .divsize {
   height: 100vh;
+  overflow: scroll;
+  padding-bottom: 1rem;
 }
 
 .subcategory {
-  background-color: green;
+  // background-color: green;
+  .subcategory-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
