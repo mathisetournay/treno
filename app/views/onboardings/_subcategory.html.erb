@@ -1,22 +1,8 @@
-<div class="divsize subcategory">
+<div id="sub_category" class="divsize subcategory">
   <div class="subcategory-wrapper">
     <h1><span class="pink" data-name-target="firstName"></span> tell us more!</h1>
     <h2>Make your choice!</h2>
-
-    <div class="swiper-sub">
-      <%= f.input :Environment,
-                  legend_tag: false,
-                  collection: ["Forest", "Ocean", "Global Warming", "Sensibilization", "Agriculture"],
-                  include_blank: "Anything",
-                  wrapper_html: { class: 'form-group swiper-wrapper' },
-                  as: :check_boxes,
-                  include_hidden: false,
-                  input_html: {name: "user[favorite_sub_categories][]", multiple: true, class: "uncheckedboxes tag-selector"},
-                  item_wrapper_class: "tag-item swiper-slide",
-                  label_method: lambda { |category| render 'cardsubcategorie', category: category }%> <!-- à changer? -->
-    </div>
-
-    <%= f.input :Solidarity,
+    <%= f.input :Environment,
                 legend_tag: false,
                 collection: ["Homeless", "Elderly People", "Disability", "Orphans", "Refugees"],
                 include_blank: "Anything",
@@ -25,7 +11,7 @@
                 include_hidden: false,
                 input_html: {name: "user[favorite_sub_categories][]", multiple: true, class: "uncheckedboxes tag-selector"},
                 item_wrapper_class: "tag-item",
-                label_method: lambda { |category| render 'cardsubcategorie', category: category }%> <!-- à changer? -->
+                label_method: lambda { |category| render 'cardsubcategorie', category: category } %> <!-- à changer? -->
 
     <%= f.input :Animals,
                 legend_tag: false,
@@ -36,8 +22,8 @@
                 include_hidden: false,
                 input_html: {name: "user[favorite_sub_categories][]", multiple: true, class: "uncheckedboxes tag-selector"},
                 item_wrapper_class: "tag-item",
-                label_method: lambda { |category| render 'cardsubcategorie', category: category }%> <!-- à changer? -->
+                label_method: lambda { |category| render 'cardsubcategorie', category: category } %> <!-- à changer? -->
 
-    <button class="btn-1">continue</button>
+    <%= link_to "Continue", "#info", data: {turbolinks: false}, class: "btn btn-1 mt-5" %>
   </div>
 </div>
