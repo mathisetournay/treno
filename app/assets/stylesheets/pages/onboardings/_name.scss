@@ -1,17 +1,32 @@
 .divsize {
   height: 100vh;
+  width: 100vw;
 }
 
 .name {
-  padding: 4rem 1rem;
-  background-color: pink;
+  padding: 5rem 1rem;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.name-content p {
+.name p {
   text-align: center;
-  margin-top: 1rem;
+  padding-top: 0.8rem;
 }
 
+.input-name {
+  margin-top: 2rem;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+  border-radius: 50px;
+  border: none;
+}
+
+.footer-top {
+  margin-top: 26rem;
+}
 // position: relative;
 // width: 375px;
 // height: 812px;
