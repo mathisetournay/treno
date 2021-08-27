@@ -1,17 +1,18 @@
 <div class="divsize category">
   <h1>Hi Simon nice to meet you!</h1>
   <h2>What do you care about?</h2>
-  <ul>
+  <div>
     <%= f.input :categories,
+                legend_tag: false,
                 collection: @categories,
                 include_blank: "Anything",
-                wrapper_html: { class: 'form-group' },
+                wrapper_html: { class: 'form-group grid' },
                 as: :check_boxes,
                 include_hidden: false,
                 input_html: { name: "categories[]", multiple: true, class: "uncheckedboxes tag-selector"},
                 item_wrapper_class: "tag-item",
                 label_method: lambda { |category| render 'cardcategorie', category: category }
                 %>
-  </ul>
+  </div>
   <button class="btn-1">continue</button>
 </div>
