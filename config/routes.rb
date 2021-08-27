@@ -18,7 +18,5 @@ Rails.application.routes.draw do
 
   resources :nonprofits, only: [:show, :index]
 
-  resources :donation_sessions, only: [:create] do
-    resource :budget_allocation, only: [:edit, :update]
-  end
+  resources :donation_sessions, only: [:create, :edit, :update]
 end
