@@ -2,7 +2,7 @@ class Nonprofit < ApplicationRecord
   CATEGORIES = {
     "Environment" => ["Forest", "Ocean", "Global Warming", "Sensibilization", "Agriculture"],
     "Animals" => ["Birds", "Bees", "Animals Shelters", "Biodiversity", "Endangered Species"],
-    "Solidarity" => ["Homeless", "Elderly people", "Disability", "Orphans", "Refugees"],
+    "Solidarity" => ["Homeless", "Elderly People", "Disability", "Orphans", "Refugees"],
     "Culture" => [],
     "Health" => [],
     "Humanitarian" => [],
@@ -11,7 +11,6 @@ class Nonprofit < ApplicationRecord
     "Employment" => [],
     "Education" => []
   }
-
   has_one_attached :photo
 
   SUB_CATEGORIES = CATEGORIES.values.flatten
@@ -23,8 +22,6 @@ class Nonprofit < ApplicationRecord
     sub_category.downcase.split.join("-") + '.png'
   end
 
-  private
-  
   def category
     search_category = CATEGORIES.find do |_, values|
       values.include?(sub_category)
@@ -32,3 +29,5 @@ class Nonprofit < ApplicationRecord
     search_category.first
   end
 
+
+end

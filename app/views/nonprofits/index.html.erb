@@ -7,7 +7,7 @@
     </div><div class="avatar"></div>
   </div>
 
-  <%= simple_form_for :donation_sessions do |f| %>
+  <%= simple_form_for :donation_sessions, url: :donation_sessions  do |f| %>
     <%= f.input :nonprofits,
                       as: :check_boxes,
                       input_html: { class: "tag-selector" },
@@ -16,7 +16,7 @@
                       include_blank: "Anything",
                       wrapper_html: { class: "form-group" },
                       include_hidden: false,
-                      input_html: { name: "categories[]", multiple: true, class: "uncheckedboxes tag-selector"},
+                      input_html: { name: "nonprofits[]", multiple: true, class: "uncheckedboxes tag-selector"},
                       label_method: lambda { |nonprofit| render 'nonprofits', nonprofit: nonprofit }%>
 
 </div>

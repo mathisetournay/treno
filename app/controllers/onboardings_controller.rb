@@ -8,6 +8,7 @@ class OnboardingsController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.save!
+    redirect_to nonprofits_path(favorite_sub_categories: user_params[:favorite_sub_categories])
   end
 
   private
