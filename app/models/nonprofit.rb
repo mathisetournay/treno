@@ -31,4 +31,5 @@ class Nonprofit < ApplicationRecord
     end
     search_category.first
   end
+
 end
