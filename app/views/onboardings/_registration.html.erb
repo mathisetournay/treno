@@ -3,17 +3,22 @@
 
   <div class="form-inputs">
     <%= f.input :email,
+                legend_tag: false,
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email", class: "final_form_input" }%>
     <%= f.input :password,
+                legend_tag: false,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password", class: "final_form_input" } %>
     <%= f.input :password_confirmation,
+                legend_tag: false,
                 required: true,
                 input_html: { autocomplete: "new-password", class: "final_form_input" } %>
   </div>
 
-  <%= f.submit 'Register'%> <!-- Redirect to or Link to ? go to => INDEX -->
+  <div class="registration-btn-wrapper d-flex justify-content-center w-100">
+    <%= f.submit 'Register', :class => 'btn-1' %> <!-- Redirect to or Link to ? go to => INDEX -->
+  </div>
 </div>
