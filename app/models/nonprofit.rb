@@ -24,11 +24,11 @@ class Nonprofit < ApplicationRecord
   end
 
   private
-  
+
   def category
     search_category = CATEGORIES.find do |_, values|
       values.include?(sub_category)
     end
     search_category.first
   end
-
+end
