@@ -1,4 +1,4 @@
-<div class="divsize budget" data-controller="budget">
+<div id="budget" class="divsize budget" data-controller="budget">
   <h1><span class="pink" data-name-target="firstName"></span><br/>Tell us your budget!</h1>
   <div class="center">
     <%= image_tag "components_treno/rechercher.png" %>
@@ -16,5 +16,5 @@
     <span class="money" data-action="click->budget#setBudget" data-budget="100">100€</span>
     <span class="money" data-action="click->budget#setBudget" data-budget="500">500€</span>
   </div>
-  <button class="btn btn-1" <% link_to "/new" %>class=“text-center”>Continue</button>
+   <%= link_to "Continue", "#registration", data: {turbolinks: false}, class: "btn-1 mt-5" %>
 </div>
