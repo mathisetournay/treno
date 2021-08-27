@@ -1,5 +1,5 @@
 class DonationSessionsController < ApplicationController
-  before_action :set_donation_session, except: [:create, :edit]
+  before_action :set_donation_session, only: [ :edit]
 
 
   def create
@@ -16,6 +16,11 @@ class DonationSessionsController < ApplicationController
     end
   end
 
+  def update
+    redirect_to nonprofits_path
+
+
+  end
   private
 
   def set_donation_session

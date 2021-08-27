@@ -1,36 +1,58 @@
-.donation-grid {
-  padding: 1rem 2rem;
+.remaining-budget {
   display: flex;
-  justify-content: space-between;
-  background-color: $dark_blue;
-  align-items: center;
-  .association-logo {
+  margin-left: 20px;
+
+
+  p {
+    margin-right: 10px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+}
+.actual-donation {
+  display: flex;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  p{
+    margin-right: 100px;
+  }
+}
+
+.list-asso {
+  margin-bottom: 20px;
+  .donation-grid {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: $dark_blue;
+    align-items: center;
+    margin: 0;
+
+
+    p {
+      font-weight: 800;
+      margin: 0;
+      margin-right: 20px;
+    }
+
     img {
-      width: 70px;
-      height: 70px;
+      width: 80px;
+      height: 80px;
       // background-position: center;
       // background-size: cover;
       border-radius: 10px;
     }
-  }
+    .donation-case {
 
-  .association-name {
-    font-weight: 800;
-  }
+      .form-control {
 
-  .donation {
-    label {
-      align-self: center;
-      display: block;
-      font: 1rem $body-font, sans-serif;
-    }
-
-    input,
-    label {
-     margin: .4rem 0;
-    }
-    input {
-      width: 4rem;
+          border-radius: 1rem;
+          overflow: visible;
+          width: 50px;
+          height: 30px;
+          text-align: end;
+      }
     }
   }
 }
