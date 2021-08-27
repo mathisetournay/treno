@@ -8,6 +8,6 @@ export default class extends Controller {
 
     this.inputTarget.value = budget
 
-    this.realCostTarget.innerHTML = `${(budget * 0.66).toFixed(2)}€`
+    this.realCostTarget.innerHTML = `${(budget * 0.34).toFixed(2)}€`
   }
 }
