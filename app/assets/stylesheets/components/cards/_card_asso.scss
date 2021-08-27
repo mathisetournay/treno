@@ -6,16 +6,16 @@
 
 
 .card-asso {
-  width: 100%;
-  height: 200px;
-  padding: .5rem;
+  width: 91vw;
+  height: -webkit-fill-available;
+
 
   .asso-infos {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 1rem;
+    border-radius: 27px;
 
     background-position: center;
     background-size: cover;
@@ -48,8 +48,8 @@
 
   .content {
     background-color: #FFFFFF;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 27px;
+    border-bottom-right-radius: 27px;
 
 
 
@@ -66,7 +66,7 @@
       font-weight: 600;
       font-size: 24px;
       line-height: 33px;
-      color: #243E53;
+      color: $blue_gray;
     }
 
     .asso-subtitle-content {
@@ -76,7 +76,7 @@
       font-weight: 500;
       font-size: 16px;
       line-height: 22px;
-      color: #243E53;
+      color: $blue_gray;
     }
 
     .position-img-asso {
@@ -94,7 +94,7 @@
     .asso-paragraph-content {
       margin-top: 10px;
       padding: 10px;
-      color: $navy;
+      color: $blue_gray;
     }
   }
 }
