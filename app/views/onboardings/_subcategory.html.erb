@@ -1,7 +1,6 @@
-<div class="divsize subcategory">
+<div id="sub_category" class="divsize subcategory">
   <h1><span class="pink" data-name-target="firstName"></span> tell us more!</h1>
   <h2>Make your choice!</h2>
-
   <div class="swiper-sub">
     <%= f.input :Environment,
                 legend_tag: false,
@@ -37,5 +36,5 @@
               item_wrapper_class: "tag-item",
               label_method: lambda { |category| render 'cardsubcategorie', category: category }%> <!-- à changer? -->
 
-  <button class="btn-1">continue</button>
+   <%= link_to "Continue", "#info", data: {turbolinks: false}, class: "btn-1 mt-5" %>
 </div>

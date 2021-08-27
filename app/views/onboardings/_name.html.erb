@@ -1,4 +1,4 @@
-<div class="divsize name">
+<div id="name" class="divsize name">
 
 
 
@@ -7,7 +7,9 @@
    <h2>What do you friends call you?</h2>
     <%= f.input :first_name, placeholder: "Flore", label: false, input_html: { value: nil, data: { name_target: "firstNameInput" }, class: "input-name" } %>
     <div class="footer-top">
-    <button class="btn-1 mt-5" data-action="click->name#setFirstName" >continue</button>
+    <%= link_to "Continue", "#category", data: {turbolinks: false, action: "click->name#setFirstName" }, class: "btn-1 mt-5" %>
+    <%# <button class="btn-1 mt-5" data-action="click->name#setFirstName" >continue</button> %>
+
     <p>Already have an account ? Log in > </p>
     </div>
   </div>
