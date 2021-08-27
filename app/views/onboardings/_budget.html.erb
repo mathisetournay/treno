@@ -1,14 +1,20 @@
-<div class="divsize budget">
-  <h1>Simon tell us your budget !</h1>
-  <img>
-  <%= f.input :donation_budget, input_html: { value: 8 } %>
+<div class="divsize budget" data-controller="budget">
+  <h1><span class="pink" data-name-target="firstName"></span><br/>Tell us your budget!</h1>
+  <div class="center">
+    <%= image_tag "components_treno/rechercher.png" %>
+  </div>
+  <%= f.input :donation_budget, input_html: { value: 8, data:  { budget_target: "input" } } %>
 
-  <p>The real cost of your donation</p>
-  <p>2,72€</p>
-  <button>5€</button>
-  <button>20€</button>
-  <button>50€</button>
-  <button>100€</button>
-  <button>500€</button>
-  <button>Continue</button>
+  <div class="donation_cost">
+    <p class="wide secondary_information">The real cost of your donation</p>
+    <p class="secondary_information" data-budget-target="realCost">2,72€</p>
+  </div>
+  <div class="donation_suggestions">
+    <span class="money" data-action="click->budget#setBudget" data-budget="5">5€</span>
+    <span class="money" data-action="click->budget#setBudget" data-budget="20">20€</span>
+    <span class="money" data-action="click->budget#setBudget" data-budget="50">50€</span>
+    <span class="money" data-action="click->budget#setBudget" data-budget="100">100€</span>
+    <span class="money" data-action="click->budget#setBudget" data-budget="500">500€</span>
+  </div>
+  <button class="btn btn-1" <% link_to "/new" %>class=“text-center”>Continue</button>
 </div>

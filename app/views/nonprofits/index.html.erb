@@ -7,39 +7,17 @@
     </div><div class="avatar"></div>
   </div>
 
-<%  @nonprofits.each do |nonprofit| %>
-
- <div class="card-asso accordion" id="accordionAsso">
-    <div class="asso-infos">
-      <div class="position-title" id="headingAsso">
-        <h1> <%= nonprofit.catchline %> </h1>
-        <h2 class="asso-subtitle"> <%= nonprofit.name %></h2>
-      </div>
-      <div class="collapse-btn">
-         <i class="collapsed fas fa-chevron-down" data-toggle="collapse" data-target="#collapseAsso" aria-expanded="false" aria-controls="collapseAsso"></i>
-      </div>
-      <div class="collapse content" id="collapseAsso" aria-labelby="headingAsso" data-parent="#accordionAsso">
-        <div class="d-flex justify-content-between">
-          <div>
-            <h1 class="asso-title-content flex-item"> <%= nonprofit.name %></h1>
-            <h2 class="asso-subtitle-content flex-item"> <%= nonprofit.sub_category %></h2>
-          </div>
-          <div class="position-img-asso flex-item">
-            <%= image_tag "forest.png" %>
-          </div>
-        </div>
-        <p class="asso-paragraph-content"><%=nonprofit.description%></p>
-      </div>
-    </div>
-<% end %>
-
-
-
-
-
-
-
-
-
-
+  <%= simple_form_for :donation_sessions do |f| %>
+    <%= f.input :nonprofits,
+                      as: :check_boxes,
+                      input_html: { class: "tag-selector" },
+                      item_wrapper_class: "tag-item",
+                      collection: @nonprofits,
+                      include_blank: "Anything",
+                      wrapper_html: { class: "form-group" },
+                      include_hidden: false,
+                      input_html: { name: "categories[]", multiple: true, class: "uncheckedboxes tag-selector"},
+                      label_method: lambda { |nonprofit| render 'nonprofits', nonprofit: nonprofit }
+                      %>
+  <%end%>
 </div>
