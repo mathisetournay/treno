@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :donation_sessions
   has_many :donations, through: :donation_sessions
 
+  has_one_attached :avatar
+
   validate :favorite_sub_categories_is_in_list
 
   private

@@ -19,6 +19,6 @@ class OnboardingsController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :email, :password, :donation_budget, favorite_sub_categories: [])
+    params.require(:user).permit(:first_name, :email, :password, :avatar, :donation_budget, favorite_sub_categories: [])
   end
 end
