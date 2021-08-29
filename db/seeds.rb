@@ -25,7 +25,7 @@ forest = Nonprofit.new(
   catchline: "Replanting trees",
   website: "https://www.minibigforest.com/"
 )
-file = File.open(Rails.root.join('app/assets/images/minibigforest.png'))
+file = File.open(Rails.root.join('app/assets/images/association/minibigforest.png'))
 forest.photo.attach(io: file, filename: 'minibigforest.png', content_type: 'image/png')
 forest.save!
 
@@ -39,7 +39,7 @@ ocean = Nonprofit.new(
   catchline: "Cleaning the ocean",
   website: "https://theoceancleanup.com/"
 )
-file = File.open(Rails.root.join('app/assets/images/oceancleanup.png'))
+file = File.open(Rails.root.join('app/assets/images/association/oceancleanup.png'))
 ocean.photo.attach(io: file, filename: 'oceancleanup.png', content_type: 'image/png')
 ocean.save!
 
@@ -53,7 +53,7 @@ global_warming = Nonprofit.new(
   catchline: "Organizing the future",
   website: "https://reseauactionclimat.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/reseauactionclimat.png'))
+file = File.open(Rails.root.join('app/assets/images/association/reseauactionclimat.png'))
 global_warming.photo.attach(io: file, filename: 'reseauactionclimat.png', content_type: 'image/png')
 global_warming.save!
 
@@ -67,7 +67,7 @@ sensibilization = Nonprofit.new(
   catchline: "Orchestrating the transition",
   website: "https://makesense.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/makesense.png'))
+file = File.open(Rails.root.join('app/assets/images/association/makesense.png'))
 sensibilization.photo.attach(io: file, filename: 'makesense.png', content_type: 'image/png')
 sensibilization.save!
 
@@ -81,7 +81,7 @@ agriculture = Nonprofit.new(
   catchline: "Helping farmers",
   website: "https://solidaritepaysans.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/solidaritepaysans.png'))
+file = File.open(Rails.root.join('app/assets/images/association/solidaritepaysans.png'))
 agriculture.photo.attach(io: file, filename: 'solidaritepaysans.png', content_type: 'image/png')
 agriculture.save!
 
@@ -95,7 +95,7 @@ homeless = Nonprofit.new(
   catchline: "Feeding the destitute",
   website: "https://associationlesptitsgilets.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/lespetitsgilets.png'))
+file = File.open(Rails.root.join('app/assets/images/association/lespetitsgilets.png'))
 homeless.photo.attach(io: file, filename: 'lespetitsgilets.png', content_type: 'image/png')
 homeless.save!
 
@@ -109,7 +109,7 @@ elderly_people = Nonprofit.new(
   catchline: "Listening seniors",
   website: "https://fonds-eugenie.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/fondseugenie.png'))
+file = File.open(Rails.root.join('app/assets/images/association/fondseugenie.png'))
 elderly_people.photo.attach(io: file, filename: 'fondseugenie.png', content_type: 'image/png')
 elderly_people.save!
 
@@ -123,7 +123,7 @@ disability = Nonprofit.new(
   catchline: "Supporting the disabled",
   website: "https://handichiens.org/?gclid=Cj0KCQjwsZKJBhC0ARIsAJ96n3W3Idko_6-hUNiP3qzCDnQaUspEniKDyjzwBNpe6lRrdpJLHOWeXGcaAhfEEALw_wcB"
 )
-file = File.open(Rails.root.join('app/assets/images/handichiens.png'))
+file = File.open(Rails.root.join('app/assets/images/association/handichiens.png'))
 disability.photo.attach(io: file, filename: 'handichiens.png', content_type: 'image/png')
 disability.save!
 
@@ -137,7 +137,7 @@ orphans = Nonprofit.new(
   catchline: "Protecting the orphans",
   website: "https://www.miraclefoundation.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/miraclefoundation.png'))
+file = File.open(Rails.root.join('app/assets/images/association/miraclefoundation.png'))
 orphans.photo.attach(io: file, filename: 'miraclefoundation.png', content_type: 'image/png')
 orphans.save!
 
@@ -151,7 +151,7 @@ refugees = Nonprofit.new(
   catchline: "Rescuing the refugees",
   website: "https://www.refugeesinternational.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/refugeesinternational.png'))
+file = File.open(Rails.root.join('app/assets/images/association/refugeesinternational.png'))
 refugees.photo.attach(io: file, filename: 'refugeesinternational.png', content_type: 'image/png')
 refugees.save!
 
@@ -165,7 +165,7 @@ birds = Nonprofit.new(
   catchline: "Preserving birds",
   website: "https://www.lpo.fr/"
 )
-file = File.open(Rails.root.join('app/assets/images/lpo.png'))
+file = File.open(Rails.root.join('app/assets/images/association/lpo.png'))
 birds.photo.attach(io: file, filename: 'lpo.png', content_type: 'image/png')
 birds.save!
 
@@ -179,7 +179,7 @@ bees = Nonprofit.new(
   catchline: "Safeguarding bees",
   website: "https://association.confidencesdabeilles.fr/"
 )
-file = File.open(Rails.root.join('app/assets/images/confidencesdabeilles.png'))
+file = File.open(Rails.root.join('app/assets/images/association/confidencesdabeilles.png'))
 bees.photo.attach(io: file, filename: 'confidencesdabeilles.png', content_type: 'image/png')
 bees.save!
 
@@ -193,7 +193,7 @@ animals_shelters = Nonprofit.new(
   catchline: "Protecting animals",
   website: "https://www.la-spa.fr/"
 )
-file = File.open(Rails.root.join('app/assets/images/spa.png'))
+file = File.open(Rails.root.join('app/assets/images/association/spa.png'))
 animals_shelters.photo.attach(io: file, filename: 'spa.png', content_type: 'image/png')
 animals_shelters.save!
 
@@ -207,7 +207,7 @@ biodiversity = Nonprofit.new(
   catchline: "Taking care of our planet",
   website: "https://kalaweit.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/kalaweit.png'))
+file = File.open(Rails.root.join('app/assets/images/association/kalaweit.png'))
 biodiversity.photo.attach(io: file, filename: 'kalaweit.png', content_type: 'image/png')
 biodiversity.save!
 
@@ -221,7 +221,7 @@ endangered_species = Nonprofit.new(
   catchline: "Saving mass extinction",
   website: "https://www.worldwildlife.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/wwf.png'))
+file = File.open(Rails.root.join('app/assets/images/association/wwf.png'))
 endangered_species.photo.attach(io: file, filename: 'wwf.png', content_type: 'image/png')
 endangered_species.save!
 
