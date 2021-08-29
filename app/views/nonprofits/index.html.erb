@@ -4,14 +4,17 @@
     <div>
       <h1>Hi <span class="pink"> <%= current_user.first_name %> </span></h1>
       <h2>Welcome home</h2>
-    </div><div class="avatar"></div>
+    </div>
+    <div class="avatar">
+     <%=image_tag current_user.avatar, class: "show-avatar"%>
+    </div>
   </div>
 
   <%= simple_form_for :donation_sessions, url: :donation_sessions  do |f| %>
     <%= f.input :nonprofits,
                       as: :check_boxes,
                       input_html: { class: "tag-selector" },
-                      item_wrapper_class: "tag-item",
+                      item_wrapper_class: "tag-item-2",
                       collection: @nonprofits,
                       include_blank: "Anything",
                       wrapper_html: { class: "form-group" },
@@ -24,8 +27,3 @@
                         <%= f.button :submit, "Donate()"%>
                       </div>
   <%end%>
-
-
-<%# <%if tag-selector.checked? > 0 %> %>
-
-  <%# <%end%> %>

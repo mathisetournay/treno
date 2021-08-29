@@ -5,10 +5,8 @@
       <h1> <%= nonprofit.catchline %> </h1>
       <h2 class="asso-subtitle"> with <%= nonprofit.name %></h2>
     </div>
-    <div class="collapse-btn">
-      <i class="collapsed fas fa-chevron-down" data-toggle="collapse" data-target=<%="#collapse-asso-#{nonprofit.id}"%> aria-expanded="false" aria-controls=<%="collapse-asso-#{nonprofit.id}"%>></i>
-    </div>
-    <div class="collapse content" id=<%="collapse-asso-#{nonprofit.id}"%> aria-labelby=<%="heading-asso-#{nonprofit.id}"%> data-parent=<%="#accordion-asso-#{nonprofit.id}"%>>
+
+    <div class="content">
       <div class="d-flex justify-content-between">
         <div>
           <h1 class="asso-title-content flex-item"> <%= nonprofit.category %></h1>

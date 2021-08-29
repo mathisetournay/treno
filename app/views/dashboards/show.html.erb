@@ -1,0 +1,30 @@
+<div class="general-container">
+  <div class="avatar-grid">
+    <div>
+      <h1>Hi <span class="pink"> <%= current_user.first_name %> </span></h1>
+      <h2>Welcome home</h2>
+    </div><div class="avatar"></div>
+    <p class="information">My donation</p>
+  </div>
+  <%@donations.each do |donation|%>
+    <div class="card-dashboard-home">
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <h1 class="title-home flex-item"> <%= donation.nonprofit.name%> Nature </h1>
+          <h2 class="subtitle-home flex-item"> <%= donation.nonprofit.sub_category%> Animal</h2>
+          <p class="price-home flex-item"> <%= donation.nonprofit.sub_category%> Price</p>
+        </div>
+        <div class="picture-home flex-item">
+          <%= image_tag url_for(donation.nonprofit.photo) %>
+        </div>
+      </div>
+    </div>
+  <%end%>
+</div>
+
+
+<div class="user-menu-grid">
+  <%= image_tag "nav_bar_components/home-52.png"%>
+  <%= image_tag "nav_bar_components/gift-2.png"%>
+  <%= image_tag "nav_bar_components/view_carousel.png"%>
+</div>
