@@ -6,7 +6,7 @@
 
 
 .card-asso {
-  width: 91vw;
+  width: 92vw;
   height: -webkit-fill-available;
   border: 5px solid transparent;
 
@@ -17,10 +17,9 @@
     flex-direction: column;
     justify-content: space-between;
     border-radius: 27px;
-
     background-position: center;
     background-size: cover;
-    filter: grayscale(20%);
+      filter: grayscale(20%);
 
     .position-title {
       align-items: center;

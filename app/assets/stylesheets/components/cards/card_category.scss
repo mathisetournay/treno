@@ -2,8 +2,11 @@
   height: 75px;
   background-position: center;
   background-size: cover;
-  filter: grayscale(20%);
   border-radius: 1rem;
+
+  img {
+    filter: grayscale(20%);
+  }
 
     .category-infos{
       width: 100%;

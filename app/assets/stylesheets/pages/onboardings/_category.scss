@@ -23,8 +23,9 @@
       display: inline-block;
     }
     .tag-selector:checked + label {
-      border: 5px solid #4DBEA3;
+      // border: 5px solid #4DBEA3;
       border-radius: 1.25rem;
+      -webkit-box-shadow: 0px 0px 0px 5px #4dbea3;
     }
   }
 }
