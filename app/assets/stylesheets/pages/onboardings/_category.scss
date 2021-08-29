@@ -6,35 +6,28 @@
     transform: scale(0);
   }
 
-  .form-check-label .collection_check_boxes{
 
-    .tag-item {
-      display: inline-block;
-
-    }
+  .tag-item {
+    display: inline-block;
+    width: -webkit-fill-available;
+      margin-bottom: 20px;
 
     .tag-selector {
       position: absolute;
       transform: scale(0);
-
     }
 
     .tag-selector + label {
       cursor: pointer;
-      margin-bottom: 0.4rem;
-      width: inherit;
-
+      width: -webkit-fill-available;
+      display: inline-block;
     }
-
     .tag-selector:checked + label {
-      border-color: $green;
-      color: white;
       border: 5px solid #4DBEA3;
       border-radius: 1.25rem;
     }
-
   }
-  }
+}
 
 
 
