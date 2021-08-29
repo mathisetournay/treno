@@ -25,8 +25,8 @@ forest = Nonprofit.new(
   catchline: "Replanting trees",
   website: "https://www.minibigforest.com/"
 )
-file = File.open(Rails.root.join('app/assets/images/minigbigforest.png'))
-forest.photo.attach(io: file, filename: 'minigbigforest.png', content_type: 'image/png')
+file = File.open(Rails.root.join('app/assets/images/minibigforest.png'))
+forest.photo.attach(io: file, filename: 'minibigforest.png', content_type: 'image/png')
 forest.save!
 
 puts "Done"
