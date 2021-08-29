@@ -33,6 +33,31 @@
   <br>
   <br>
   <br>
+  <div class="card-asso accordion" id=<%="accordion-asso-#{nonprofit.id}"%>>
+  <div class="asso-infos"   style="background-image: url(<%= asset_path(nonprofit.sub_category_image_path)%>)">
+
+    <div class="position-title" id=<%="heading-asso-#{nonprofit.id}"%>>
+      <h1> <%= nonprofit.catchline %> </h1>
+      <h2 class="asso-subtitle"> with <%= nonprofit.name %></h2>
+    </div>
+    <div class="collapse-btn">
+      <i class="collapsed fas fa-chevron-down" data-toggle="collapse" data-target=<%="#collapse-asso-#{nonprofit.id}"%> aria-expanded="false" aria-controls=<%="collapse-asso-#{nonprofit.id}"%>></i>
+    </div>
+    <div class="collapse content" id=<%="collapse-asso-#{nonprofit.id}"%> aria-labelby=<%="heading-asso-#{nonprofit.id}"%> data-parent=<%="#accordion-asso-#{nonprofit.id}"%>>
+      <div class="d-flex justify-content-between">
+        <div>
+          <h1 class="asso-title-content flex-item"> <%= nonprofit.category %></h1>
+          <h2 class="asso-subtitle-content flex-item"> <%= nonprofit.sub_category %></h2>
+        </div>
+        <div class="position-img-asso flex-item">
+          <%= image_tag url_for(nonprofit.photo) %>
+        </div>
+      </div>
+      <p class="asso-paragraph-content"><%=nonprofit.description%></p>
+    </div>
+  </div>
+</div>
+
   <br>
   <br>
   <br>

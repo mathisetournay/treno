@@ -5,6 +5,7 @@
 .tag-item {
   display: inline-block;
   width: -webkit-fill-available;
+    margin-bottom: 48px;
 
   .tag-selector {
     position: absolute;
@@ -13,7 +14,7 @@
 
   .tag-selector + label {
     cursor: pointer;
-    // width: -webkit-fill-available;
+    width: -webkit-fill-available;
     display: inline-block;
     // font-size: 0.7rem;
     // border-radius: 50rem;
@@ -28,7 +29,8 @@
 
   .tag-selector:checked + label {
     border: 5px solid #4DBEA3;
-    border-radius: 2rem;
+    border-radius: 1.25rem;
+
     // width: 94vw;
     // height: 22vh;
 

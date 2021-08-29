@@ -1,33 +1,45 @@
 .divsize {
   height: 100vh;
-}
 
-.uncheckedboxes {
-  position: absolute;
-  transform: scale(0);
-}
+  .uncheckedboxes {
+    position: absolute;
+    transform: scale(0);
+  }
+
+  .form-check-label .collection_check_boxes{
+
+    .tag-item {
+      display: inline-block;
+
+    }
+
+    .tag-selector {
+      position: absolute;
+      transform: scale(0);
+
+    }
+
+    .tag-selector + label {
+      cursor: pointer;
+      margin-bottom: 0.4rem;
+      width: inherit;
+
+    }
+
+    .tag-selector:checked + label {
+      border-color: $green;
+      color: white;
+      border: 5px solid #4DBEA3;
+      border-radius: 1.25rem;
+    }
+
+  }
+  }
+
+
 
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: .5rem 1rem;
-}
-.tag-item {
-  display: inline-block;
-}
-
-.tag-selector {
-  position: absolute;
-  transform: scale(0);
-}
-
-.tag-selector + label {
-  cursor: pointer;
-  margin-bottom: 0.4rem;
-  width: inherit;
-}
-
-.tag-selector:checked + label {
-  border-color: $green;
-  color: white;
 }

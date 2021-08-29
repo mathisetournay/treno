@@ -17,10 +17,9 @@ class DonationSessionsController < ApplicationController
   end
 
   def update
-    redirect_to nonprofits_path
-
-
+    redirect_to user_root_path
   end
+
   private
 
   def set_donation_session

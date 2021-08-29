@@ -16,6 +16,7 @@
   margin-bottom: 20px;
   p{
     margin-right: 100px;
+
   }
 }
 
@@ -28,12 +29,14 @@
     background-color: $dark_blue;
     align-items: center;
     margin: 0;
+    text-align: center;
 
 
     p {
       font-weight: 800;
       margin: 0;
       margin-right: 20px;
+      margin-left: 20px;
     }
 
     img {
@@ -44,14 +47,17 @@
       border-radius: 10px;
     }
     .donation-case {
+      label {
+        font-size: 0;
+      }
 
       .form-control {
 
           border-radius: 1rem;
           overflow: visible;
-          width: 50px;
-          height: 30px;
-          text-align: end;
+          width: 80px;
+          height: 40px;
+          text-align: center;
       }
     }
   }

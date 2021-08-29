@@ -16,7 +16,7 @@
     <%# <h2><%= current_user.donation_sessions.total_amount %></h2> %>
   </div>
 
-  <%= simple_form_for :donation_sessions, url: donation_session_path(@donation_session), method: :patch  do |f| %> %>
+  <%= simple_form_for :donation_sessions, url: donation_session_path(@donation_session), method: :patch  do |f| %>
     <%@donations.each do |donation|%>
 
       <div class="list-asso">
@@ -31,7 +31,8 @@
       </div>
     <%end %>
 
-    <%= f.button :submit, "Validate", input_html: {class: "btn-1"} %>
+      <%= f.button :submit, "Validate", class: "btn btn-1 mt-5" %>
+
   <% end %>
 
 </div>
