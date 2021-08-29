@@ -25,8 +25,8 @@ forest = Nonprofit.new(
   catchline: "Replanting trees",
   website: "https://www.minibigforest.com/"
 )
-file = File.open(Rails.root.join('app/assets/images/forest.png'))
-forest.photo.attach(io: file, filename: 'forest.png', content_type: 'image/png')
+file = File.open(Rails.root.join('app/assets/images/minibigforest.png'))
+forest.photo.attach(io: file, filename: 'minibigforest.png', content_type: 'image/png')
 forest.save!
 
 puts "Done"
@@ -39,8 +39,8 @@ ocean = Nonprofit.new(
   catchline: "Cleaning the ocean",
   website: "https://theoceancleanup.com/"
 )
-file = File.open(Rails.root.join('app/assets/images/ocean.png'))
-ocean.photo.attach(io: file, filename: 'ocean.png', content_type: 'image/png')
+file = File.open(Rails.root.join('app/assets/images/oceancleanup.png'))
+ocean.photo.attach(io: file, filename: 'oceancleanup.png', content_type: 'image/png')
 ocean.save!
 
 puts "Done"
@@ -53,8 +53,8 @@ global_warming = Nonprofit.new(
   catchline: "Organizing the future",
   website: "https://reseauactionclimat.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/global-warming.png'))
-global_warming.photo.attach(io: file, filename: 'global-warming.png', content_type: 'image/png')
+file = File.open(Rails.root.join('app/assets/images/reseauactionclimat.png'))
+global_warming.photo.attach(io: file, filename: 'reseauactionclimat.png', content_type: 'image/png')
 global_warming.save!
 
 puts "Done"
@@ -67,8 +67,8 @@ sensibilization = Nonprofit.new(
   catchline: "Orchestrating the transition",
   website: "https://makesense.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/sensibilization.png'))
-sensibilization.photo.attach(io: file, filename: 'sensibilization.png', content_type: 'image/png')
+file = File.open(Rails.root.join('app/assets/images/makesense.png'))
+sensibilization.photo.attach(io: file, filename: 'makesense.png', content_type: 'image/png')
 sensibilization.save!
 
 puts "Done"
@@ -81,8 +81,8 @@ agriculture = Nonprofit.new(
   catchline: "Helping farmers",
   website: "https://solidaritepaysans.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/agriculture.png'))
-agriculture.photo.attach(io: file, filename: 'agriculture.png', content_type: 'image/png')
+file = File.open(Rails.root.join('app/assets/images/solidaritepaysans.png'))
+agriculture.photo.attach(io: file, filename: 'solidaritepaysans.png', content_type: 'image/png')
 agriculture.save!
 
 puts "Done"
@@ -95,8 +95,8 @@ homeless = Nonprofit.new(
   catchline: "Feeding the destitute",
   website: "https://associationlesptitsgilets.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/homeless.png'))
-homeless.photo.attach(io: file, filename: 'homeless.png', content_type: 'image/png')
+file = File.open(Rails.root.join('app/assets/images/lespetitsgilets.png'))
+homeless.photo.attach(io: file, filename: 'lespetitsgilets.png', content_type: 'image/png')
 homeless.save!
 
 puts "Done"
@@ -109,8 +109,8 @@ elderly_people = Nonprofit.new(
   catchline: "Listening seniors",
   website: "https://fonds-eugenie.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/elderly-people.png'))
-elderly_people.photo.attach(io: file, filename: 'elderly-people.png', content_type: 'image/png')
+file = File.open(Rails.root.join('app/assets/images/fondseugenie.png'))
+elderly_people.photo.attach(io: file, filename: 'fondseugenie.png', content_type: 'image/png')
 elderly_people.save!
 
 puts "Done"
@@ -123,8 +123,8 @@ disability = Nonprofit.new(
   catchline: "Supporting the disabled",
   website: "https://handichiens.org/?gclid=Cj0KCQjwsZKJBhC0ARIsAJ96n3W3Idko_6-hUNiP3qzCDnQaUspEniKDyjzwBNpe6lRrdpJLHOWeXGcaAhfEEALw_wcB"
 )
-file = File.open(Rails.root.join('app/assets/images/disability.png'))
-disability.photo.attach(io: file, filename: 'disability.png', content_type: 'image/png')
+file = File.open(Rails.root.join('app/assets/images/handichiens.png'))
+disability.photo.attach(io: file, filename: 'handichiens.png', content_type: 'image/png')
 disability.save!
 
 puts "Done"
@@ -137,8 +137,8 @@ orphans = Nonprofit.new(
   catchline: "Protecting the orphans",
   website: "https://www.miraclefoundation.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/orphans.png'))
-orphans.photo.attach(io: file, filename: 'orphans.png', content_type: 'image/png')
+file = File.open(Rails.root.join('app/assets/images/miraclefoundation.png'))
+orphans.photo.attach(io: file, filename: 'miraclefoundation.png', content_type: 'image/png')
 orphans.save!
 
 puts "Done"
@@ -151,8 +151,8 @@ refugees = Nonprofit.new(
   catchline: "Rescuing the refugees",
   website: "https://www.refugeesinternational.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/refugees.png'))
-refugees.photo.attach(io: file, filename: 'refugees.png', content_type: 'image/png')
+file = File.open(Rails.root.join('app/assets/images/refugeesinternational.png'))
+refugees.photo.attach(io: file, filename: 'refugeesinternational.png', content_type: 'image/png')
 refugees.save!
 
 puts "Done"
@@ -165,8 +165,8 @@ birds = Nonprofit.new(
   catchline: "Preserving birds",
   website: "https://www.lpo.fr/"
 )
-file = File.open(Rails.root.join('app/assets/images/birds.png'))
-birds.photo.attach(io: file, filename: 'birds.png', content_type: 'image/png')
+file = File.open(Rails.root.join('app/assets/images/lpo.png'))
+birds.photo.attach(io: file, filename: 'lpo.png', content_type: 'image/png')
 birds.save!
 
 puts "Done"
@@ -179,8 +179,8 @@ bees = Nonprofit.new(
   catchline: "Safeguarding bees",
   website: "https://association.confidencesdabeilles.fr/"
 )
-file = File.open(Rails.root.join('app/assets/images/bees.png'))
-bees.photo.attach(io: file, filename: 'bees.png', content_type: 'image/png')
+file = File.open(Rails.root.join('app/assets/images/confidencesdabeilles.png'))
+bees.photo.attach(io: file, filename: 'confidencesdabeilles.png', content_type: 'image/png')
 bees.save!
 
 puts "Done"
@@ -193,8 +193,8 @@ animals_shelters = Nonprofit.new(
   catchline: "Protecting animals",
   website: "https://www.la-spa.fr/"
 )
-file = File.open(Rails.root.join('app/assets/images/animals-shelters.png'))
-animals_shelters.photo.attach(io: file, filename: 'animals-shelters.png', content_type: 'image/png')
+file = File.open(Rails.root.join('app/assets/images/spa.png'))
+animals_shelters.photo.attach(io: file, filename: 'spa.png', content_type: 'image/png')
 animals_shelters.save!
 
 puts "Done"
@@ -207,8 +207,8 @@ biodiversity = Nonprofit.new(
   catchline: "Taking care of our planet",
   website: "https://kalaweit.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/biodiversity.png'))
-biodiversity.photo.attach(io: file, filename: 'biodiversity.png', content_type: 'image/png')
+file = File.open(Rails.root.join('app/assets/images/kalaweit.png'))
+biodiversity.photo.attach(io: file, filename: 'kalaweit.png', content_type: 'image/png')
 biodiversity.save!
 
 puts "Done"
@@ -221,8 +221,8 @@ endangered_species = Nonprofit.new(
   catchline: "Saving mass extinction",
   website: "https://www.worldwildlife.org/"
 )
-file = File.open(Rails.root.join('app/assets/images/endangered-species.png'))
-endangered_species.photo.attach(io: file, filename: 'endangered-species.png', content_type: 'image/png')
+file = File.open(Rails.root.join('app/assets/images/wwf.png'))
+endangered_species.photo.attach(io: file, filename: 'wwf.png', content_type: 'image/png')
 endangered_species.save!
 
 puts "All nonprofits generated"
