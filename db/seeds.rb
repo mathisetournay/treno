@@ -147,7 +147,7 @@ puts 'Create nonprofit 10'
 refugees = Nonprofit.new(
   name: "Refugees international",
   sub_category: "Refugees",
-  description: "",
+  description: "Refugees International advocates for lifesaving assistance, human rights, and protection for displaced people and promotes solutions to displacement crises around the world.",
   catchline: "Rescuing the refugees",
   website: "https://www.refugeesinternational.org/"
 )
