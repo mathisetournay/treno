@@ -1,26 +1,32 @@
 <div id="category" class="divsize category">
 
-  <div class="header-position">
-    <h1>Hi <span class="pink" data-name-target="firstName"></span> nice to meet you!</h1>
-    <h2>What do you care about?</h2>
+  <div>
+
+    <div class="header-position">
+      <h1>Hi <span class="pink" data-name-target="firstName"></span> nice to meet you!</h1>
+      <h2>What do you care about?</h2>
+    </div>
+
+    <div class="content-position">
+      <%= f.input :categories,
+                  legend_tag: false,
+                  collection: @categories,
+                  include_blank: "Anything",
+                  wrapper_html: { class: 'form-group grid' },
+                  as: :check_boxes,
+                  include_hidden: false,
+                  input_html: { data: { action: "click->category#setCategory"}, name: "categories[]", multiple: true, class: "uncheckedboxes tag-selector" },
+                  item_wrapper_class: "tag-item",
+                  label_method: lambda { |category| render 'cardcategorie', category: category }
+                  %>
+    </div>
+
+
+
+    <div class="footer-position">
+      <%= link_to "Continue", "#sub_category", data: {turbolinks: false}, class: "btn btn-1" %>
+    </div>
+
   </div>
 
-  <div class="content-position">
-    <%= f.input :categories,
-                legend_tag: false,
-                collection: @categories,
-                include_blank: "Anything",
-                wrapper_html: { class: 'form-group grid' },
-                as: :check_boxes,
-                include_hidden: false,
-                input_html: { data: { action: "click->category#setCategory"}, name: "categories[]", multiple: true, class: "uncheckedboxes tag-selector" },
-                item_wrapper_class: "tag-item",
-                label_method: lambda { |category| render 'cardcategorie', category: category }
-                %>
-  </div>
-
-
-  <div class="footer-position">
-    <%= link_to "Continue", "#sub_category", data: {turbolinks: false}, class: "btn btn-1 mt-5" %>
-  </div>
 </div>
