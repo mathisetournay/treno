@@ -3,20 +3,44 @@
 }
 
 .info {
-  // background-color: black;
   padding: 5rem 1rem;
-}
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
-.informations {
+  .content-position {
   background-color: #11629F;
   border-radius: 20px;
   padding: 2rem;
+  margin-top: 3rem;
 
-  img {
-    position: unset;
-    align-items: center;
-    width: 200px;
-    height: 200px;
-    margin-bottom: 15px;
+
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 80%;
+      height: 80%;
+      margin-bottom: 40px;
+    }
+
+    .info-p {
+      margin-bottom: 2rem;
+    }
+
+    .pink {
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 0rem;
+      font-weight: 500;
+    }
   }
+
+  .footer-position {
+    margin-top: 6.5rem;
+  }
+
 }
