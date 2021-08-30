@@ -1,22 +1,31 @@
 import { Controller } from "stimulus"
 
+
+function loadCategories() {
+  const categoriesElement = parseCategoriesElement()
+
+  if (categoriesElement) {
+    return categoriesElement.map(category => {
+      return [`${category}Display`, `${category}Selector`];
+    }).flat()
+  }
+}
+
+function parseCategoriesElement () {
+  return JSON.parse(document.getElementById('onboardingForm').dataset.categories);
+}
+
 export default class extends Controller {
 
+  static targets = loadCategories();
 
-  static targets = ["environmentDisplay", "environmentSelector"]
-
-  // connect() {
-  //   this.cat = JSON.parse(this.element.dataset.cat)
-  // }
   setCategory(event) {
+    parseCategoriesElement().forEach( cat => {
+      const display = this[`${cat}DisplayTarget`]
+      const selector = this[`${cat}SelectorTarget`]
+      const checkedSelector = selector.parentNode.previousSibling.checked
 
-    const display = this.environmentDisplayTarget
-    const checkedSelector = this.environmentSelectorTarget.parentNode.previousSibling.checked
-
-    display.hidden = !checkedSelector
-
-    console.log(this.environmentSelectorTarget)
-    console.log(checkedSelector)
-    console.log(display)
-  }
+      return display.hidden = !checkedSelector
+    })
+  };
 }
