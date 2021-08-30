@@ -6,15 +6,18 @@
                 legend_tag: false,
                 required: true,
                 autofocus: true,
+                placeholder: "john.doe@gmail.com",
                 input_html: { autocomplete: "email", class: "input-name" }%>
     <%= f.input :avatar, as: :file, label: "Image of current user" %>
     <%= f.input :password,
                 legend_tag: false,
                 required: true,
+                placeholder: "password",
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password", class: "input-name" } %>
     <%= f.input :password_confirmation,
                 legend_tag: false,
+                placeholder: "password",
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password", class: "input-name" } %>
