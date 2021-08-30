@@ -4,64 +4,53 @@
   margin: 0 auto;
 }
 
-
 .card-asso {
-  width: 92vw;
   height: -webkit-fill-available;
-  border: 5px solid transparent;
-
 
   .asso-infos {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 27px;
-    background-position: center;
-    background-size: cover;
-      filter: grayscale(20%);
 
     .position-title {
-      align-items: center;
-      place-self: end;
+      display: grid;
+      place-content: center;
+      text-align: center;
       margin: 0 auto;
       text-align: center;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
+      border-top-left-radius: 1.5rem;
+      border-top-right-radius: 1.5rem;
+      background-position: center;
+      padding: 2rem 0;
+      background-size: cover;
+      background-position: unset;
+      height: 13rem;
+      width: -webkit-fill-available;
+      padding: 0 1rem;
 
       h1, h2 {
         margin: 0;
-      }
-    }
-
-    .collapse-btn {
-      justify-content: flex-end;
-      place-self: end;
-      text-align: center;
-      margin: 0 auto;
-      z-index: 2000;
-
-      a {
-        color: white;
       }
     }
   }
 
   .content {
     background-color: #FFFFFF;
-    border-bottom-left-radius: 27px;
-    border-bottom-right-radius: 27px;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    padding: 1rem;
 
+    p {
+      margin-bottom: 0;
+    }
 
-
-    &.show .card-asso {
+    .card-asso {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
-
     }
 
     .asso-title-content {
-      padding: 20px 10px 0 10px;
       font-family: Manrope;
       font-style: normal;
       font-weight: 600;
@@ -71,7 +60,7 @@
     }
 
     .asso-subtitle-content {
-      padding: 0px 10px 10px 10px;
+      padding: 0px 10px 10px 0px;
       font-family: Manrope;
       font-style: normal;
       font-weight: 500;
@@ -81,11 +70,7 @@
     }
 
     .position-img-asso {
-      margin-top: 10px;
-      margin-right: 10px;
-
       img {
-
         width: 80px;
         height: 80px;
         border-radius: 5px;
@@ -94,7 +79,6 @@
 
     .asso-paragraph-content {
       margin-top: 10px;
-      padding: 10px;
       color: $blue_gray;
     }
   }

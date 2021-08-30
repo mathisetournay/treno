@@ -5,25 +5,23 @@
 .tag-item-2 {
   display: inline-block;
   width: -webkit-fill-available;
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 
   .tag-selector {
     position: absolute;
     transform: scale(0);
   }
 
-  .tag-selector + label {
+  .tag-selector + label .asso-infos {
     cursor: pointer;
     width: -webkit-fill-available;
     display: inline-block;
+    border: .5rem solid transparent;
   }
 
 
-  .tag-selector:checked + label {
-    // border: 5px solid #4DBEA3;
-    border-radius: 1.25rem;
-    -webkit-box-shadow: 0px 0px 0px 5px #4dbea3;
+  .tag-selector:checked + label .asso-infos {
+    border: .5rem solid #4DBEA3;
+    border-radius: 2rem;
   }
-
-
 }
