@@ -16,10 +16,11 @@
     <%= f.input :password_confirmation,
                 legend_tag: false,
                 required: true,
+                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password", class: "input-name" } %>
   </div>
 
   <div class="registration-btn-wrapper d-flex justify-content-center w-100">
-    <%= f.submit 'Register', :class => 'btn-1' %> <!-- Redirect to or Link to ? go to => INDEX -->
+    <%= f.submit 'Register', :class => 'btn-1' %>
   </div>
 </div>
