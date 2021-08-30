@@ -1,11 +1,17 @@
 <div id="info" class="divsize info">
-  <div class="info-content">
-    <h1 class=“text-center”><span class="pink" data-name-target="firstName"></span> you are in the right place</h1>
-    <div class="informations">
-      <%= image_tag "components_treno/donner.png" %>
-      <p> <span class="pink">5</span> nonprofits will be suggested to you each month according to your preferences</p>
-      <p> <span class="pink">90%</span> of Treno users commit to donating an average of 8€ per month </p>
+  <div>
+    <div>
+      <h1><span class="pink" data-name-target="firstName"></span> you are in the right place</h1>
     </div>
-     <%= link_to "Continue", "#budget", data: {turbolinks: false}, class: "btn btn-1 mt-5" %>
+
+    <div class="content-position">
+      <%= image_tag "components_treno/donner.png" %>
+      <p class="info-p"> <span class="pink">5  </span> nonprofits will be suggested to you each month according to your preferences</p>
+      <p> <span class="pink">90%  </span> of Treno users commit to donating an average of 8€ per month </p>
+    </div>
+
+    <div class="footer-position">
+      <%= link_to "Continue", "#budget", data: {turbolinks: false}, class: "btn btn-1" %>
+     </div>
   </div>
 </div>
