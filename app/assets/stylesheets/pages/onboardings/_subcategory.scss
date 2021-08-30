@@ -10,4 +10,14 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  .subcategories-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+  }
+
+  .tag-item.subcategory .card-category {
+    height: 150px;
+  }
 }

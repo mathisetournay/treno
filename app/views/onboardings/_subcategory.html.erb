@@ -1,17 +1,17 @@
 <div id="sub_category" class="divsize subcategory">
   <div class="subcategory-wrapper">
     <h1><span class="pink" data-name-target="firstName"></span> tell us more!</h1>
-    <h2>Make your choice!</h2>
+    <h2 class="mb-4">Make your choice!</h2>
     <% @sub_categories_by_category.each do |charity_type| %>
       <%= f.input charity_type.first.to_sym,
                   legend_tag: false,
                   collection: charity_type.last,
                   include_blank: "Anything",
-                  wrapper_html: { data: { "category-target".to_sym => "#{charity_type.first.parameterize}Display" }, class: 'form-group grid', hidden: true, id: "#{charity_type.first.parameterize}-display" },
+                  wrapper_html: { data: { "category-target".to_sym => "#{charity_type.first.delete(' ').camelize(:lower)}Display" }, class: 'form-group subcategories-wrapper', hidden: true, id: "#{charity_type.first.parameterize}-display" },
                   as: :check_boxes,
                   include_hidden: false,
                   input_html: {name: "user[favorite_sub_categories][]", multiple: true, class: "uncheckedboxes tag-selector"},
-                  item_wrapper_class: "tag-item",
+                  item_wrapper_class: "tag-item subcategory",
                   label_method: lambda { |category| render 'cardsubcategorie', category: category } %> <!-- à changer? -->
     <% end %>
 
