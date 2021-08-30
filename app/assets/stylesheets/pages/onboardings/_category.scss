@@ -11,6 +11,11 @@
     width: -webkit-fill-available;
     margin-bottom: 20px;
 
+    &.subcategory {
+      flex: 0 0 200px;
+      margin-right: 1rem;
+    }
+
     .form-check-label {
       display: inline;
     }
