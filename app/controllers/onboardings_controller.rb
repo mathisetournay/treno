@@ -4,6 +4,9 @@ class OnboardingsController < ApplicationController
   def new
     @sub_categories_by_category = Nonprofit::CATEGORIES
     @categories = Nonprofit::CATEGORIES.keys
+    @categories_to_js = Nonprofit::CATEGORIES.keys.map do |cat|
+      cat.delete(' ').camelize(:lower)
+    end
   end
 
   def create
