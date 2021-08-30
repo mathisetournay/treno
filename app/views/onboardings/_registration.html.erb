@@ -1,26 +1,51 @@
 <div id="registration" class="divsize registration">
-  <h1 class=“text-center”><span class="pink" data-name-target="firstName"></span> you are almost done!</h1>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                legend_tag: false,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email", class: "input-name" }%>
-    <%= f.input :avatar, as: :file, label: "Image of current user" %>
-    <%= f.input :password,
-                legend_tag: false,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password", class: "input-name" } %>
-    <%= f.input :password_confirmation,
-                legend_tag: false,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password", class: "input-name" } %>
+  <div>
+    <h1 class=“text-center”><span class="pink" data-name-target="firstName"></span> you are almost done!</h1>
   </div>
 
-  <div class="registration-btn-wrapper d-flex justify-content-center w-100">
-    <%= f.submit 'Register', :class => 'btn-1' %>
+  <div class="content position"></div>
+    <div class="form-inputs">
+      <div class="email">
+        <p>💌 What's your email?</p>
+          <%= f.input :email,
+                      label: false,
+                      required: true,
+                      autofocus: true,
+                      placeholder: "john.doe@gmail.com",
+                      input_html: { autocomplete: "email", class: "input-name" }%>
+      </div>
+
+      <div class="picture">
+        <p>📸 Choose your best picture:</p>
+        <%= f.input :avatar, as: :file, label: false, class: "pic-uploader" %>
+      </div>
+
+      <div class="pswd">
+          <p>🔑 Choose a password:</p>
+          <%= f.input :password,
+                    label: false,
+                    required: true,
+                    placeholder: "********",
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password", class: "input-name" } %>
+      </div>
+
+      <div class="confirmation">
+          <p>🔑 Password confirmation:</p>
+          <%= f.input :password_confirmation,
+                      label: false,
+                      placeholder: "********",
+                      required: true,
+                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                      input_html: { autocomplete: "new-password", class: "input-name" } %>
+      </div>
+    </div>
+
+    <div class="footer-position">
+      <%= f.submit "Register", :class => "btn btn-1" %>
+    </div>
   </div>
+
+
 </div>

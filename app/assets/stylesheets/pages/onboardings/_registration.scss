@@ -3,26 +3,68 @@
 }
 
 .registration {
-  // background-color: red;
-  position: relative;
-  .text-center {
-    margin-bottom: 5rem;
-    margin-top: 5rem;
+  padding: 5rem 1rem;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .footer-position {
+    margin-top: 10rem;
   }
-  // .form-inputs {
-  //   .final_form_input
-  //    {
-  //     border-radius: 20px;
-  //     color: $blue;
-  //     margin-bottom: 5rem;
-  //     padding: 16px 4px;
-  //     background-color: $grey;
-  //     font-weight: 700;
-  //     text-align: center;
-  //   }
-  // }
-  .registration-btn-wrapper {
-    position: absolute;
-    bottom: 24px;
+
+  .picture {
+    margin-top: 2rem;
+    p {
+      margin-bottom: 0px;
+    }
   }
+
+
+  .pswd {
+    margin-top: 2rem;
+
+    p {
+      margin-bottom: 0px;
+    }
+  }
+
+  .confirmation {
+    margin-top: 2rem;
+
+    p {
+      margin-bottom: 0px;
+    }
+  }
+
+  .email p {
+  margin-bottom: 0px;
+  }
+
+}
+
+.email .input-name {
+  margin-top: 0.5rem;
+}
+
+.form-control-file, .form-control-range {
+  margin-top: 0.5rem;
+}
+
+
+
+.password .input-name {
+  margin-top: 0.5rem;
+}
+
+.confirmation .input-name {
+  margin-top: 0.5rem;
+}
+
+.form-inputs {
+  margin-top: 2rem;
+}
+
+.registration .password {
+  margin-top: 0.5rem;
 }
