@@ -1,4 +1,4 @@
-<div class="general-container">
+<div class="general-container" data-controller="donation-sessions">
   <div class="avatar-grid">
     <div>
       <h1>Hi <span class="pink"> <%= current_user.first_name %> </span></h1>
@@ -16,7 +16,7 @@
 
   <div class= actual-donation>
     <p>Your actual donation :</p>
-    <%# <h2><%= current_user.donation_sessions.total_amount %></h2> %>
+    <h2 data-donation-sessions-target="total"> 0 €</h2>
   </div>
 
   <%= simple_form_for :donation_sessions, url: donation_session_path(@donation_session), method: :patch  do |f| %>
@@ -28,7 +28,7 @@
           <p> <%= donation.nonprofit.name %> </p>
           <div class="donation-case">
             <%= f.input :amount,
-                        input_html: {name: "amount-by-nonprofit-id[#{donation.nonprofit.id}]", type: :number, placeholder: "8" } %>
+                        input_html: { data: {action: "change->donation-sessions#count", "donation-sessions-target".to_sym => "selector"}, name: "amount-by-nonprofit-id[#{donation.nonprofit.id}]", type: :number, placeholder: "8" } %>
           </div>
         </div>
       </div>
