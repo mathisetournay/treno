@@ -1,6 +1,6 @@
 <div class="container">
   <%= simple_form_for :user, url: onboarding_path do |f| %>
-    <div class=“form-inputs” data-controller="name category" id="onboardingForm" data-categories="<%=@categories_to_js.to_json%>">
+    <div class="onboarding-form" data-controller="name category" id="onboardingForm" data-categories="<%=@categories_to_js.to_json%>">
       <%= render "name", user: @user, f: f %>
       <%= render "category", user: @user, f: f %>
       <%= render "subcategory", user: @user, f: f %>
