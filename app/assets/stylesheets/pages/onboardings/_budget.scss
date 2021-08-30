@@ -3,10 +3,14 @@
 }
 
 .budget {
-  padding: 2rem;
+  padding: 5rem 1rem;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   position: relative;
 
-  .center {
+  .content-position {
     text-align: center;
     border-radius: 20px;
     img {
@@ -15,6 +19,7 @@
       width: 200px;
       height: 200px;
       margin-bottom: 15px;
+      margin-top: 3rem;
     }
   }
   .form-group {
@@ -22,7 +27,6 @@
     align-content: space-between;
     background-color: white;
     border-radius: 20px;
-    width: 18rem;
     align-items: center;
     height: 3rem;
 
@@ -56,12 +60,11 @@
       width: 256px;
     }
   }
+
   .donation_suggestions {
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
-    // margin-left: 16px;
-    // margin-right: 16px;
     .money {
       width: 100%;
       border-radius: 20px;
@@ -72,8 +75,8 @@
       text-align: center;
     }
   }
-  .btn {
-    // position: absolute;
-    // bottom: 24px;
+
+  .footer-position {
+    margin-top: 10rem;
   }
 }

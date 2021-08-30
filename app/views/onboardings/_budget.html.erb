@@ -1,20 +1,36 @@
 <div id="budget" class="divsize budget" data-controller="budget">
-  <h1><span class="pink" data-name-target="firstName"></span><br/>Tell us your budget!</h1>
-  <div class="center">
-    <%= image_tag "components_treno/rechercher.png" %>
-  </div>
-  <%= f.input :donation_budget, input_html: { value: 8, data:  { budget_target: "input" } } %>
 
-  <div class="donation_cost">
-    <p class="wide secondary_information">The real cost of your donation</p>
-    <p class="secondary_information" data-budget-target="realCost">2,72€</p>
+  <div>
+    <h1><span class="pink" data-name-target="firstName"></span>&nbsp tell us your budget</h1>
   </div>
-  <div class="donation_suggestions">
-    <span class="money" data-action="click->budget#setBudget" data-budget="5">5€</span>
-    <span class="money" data-action="click->budget#setBudget" data-budget="20">20€</span>
-    <span class="money" data-action="click->budget#setBudget" data-budget="50">50€</span>
-    <span class="money" data-action="click->budget#setBudget" data-budget="100">100€</span>
-    <span class="money" data-action="click->budget#setBudget" data-budget="500">500€</span>
+
+
+  <div class="content-position">
+
+    <%= image_tag "components_treno/rechercher.png" %>
+
+    <%= f.input :donation_budget,
+                label: false,
+                placeholder: "your donation",
+                input_html: { value: 8, data:  { budget_target: "input" } }%>
+
+    <div class="donation_cost">
+      <p class="wide secondary_information">The real cost of your donation</p>
+      <p class="secondary_information" data-budget-target="realCost">2,72€</p>
+    </div>
+
+    <div class="donation_suggestions">
+      <span class="money" data-action="click->budget#setBudget" data-budget="5">5€</span>
+      <span class="money" data-action="click->budget#setBudget" data-budget="20">20€</span>
+      <span class="money" data-action="click->budget#setBudget" data-budget="50">50€</span>
+      <span class="money" data-action="click->budget#setBudget" data-budget="100">100€</span>
+      <span class="money" data-action="click->budget#setBudget" data-budget="500">500€</span>
+    </div>
+
   </div>
-   <%= link_to "Continue", "#registration", data: {turbolinks: false}, class: "btn btn-1 mt-5" %>
+
+  <div class="footer-position">
+    <%= link_to "Continue", "#registration", data: {turbolinks: false}, class: "btn btn-1" %>
+  </div>
+
 </div>
