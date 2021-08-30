@@ -1,6 +1,5 @@
 .divsize {
   height: 100vh;
-  // width: 100vw;
 }
 
 .name {
@@ -9,18 +8,14 @@
   padding-right: 17px;
   padding-top: 30px;
   padding-bottom: 30px;
-}
 
-.name p {
+  .footer-position {
+  margin-top: 29rem;
+  }
+
+  p {
   text-align: center;
   padding-top: 0.8rem;
-}
+  }
 
-.footer-top {
-  margin-top: 26rem;
 }
-// position: relative;
-// width: 375px;
-// height: 812px;
-
-// background: #243E53;
