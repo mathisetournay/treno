@@ -16,12 +16,12 @@
           <h1 class="title-home flex-item"> <%= donation.nonprofit.name%></h1>
           <h2 class="subtitle-home flex-item"> <%= donation.nonprofit.sub_category%></h2>
           <p class="price-home flex-item"> <%= donation.amount%> €</p>
+          <p class="secondary_information flex-item"> <%= donation.display_date%></p>
         </div>
         <div class="picture-home flex-item">
           <%= image_tag url_for(donation.nonprofit.photo) %>
         </div>
       </div>
-       <p class="secondary_information flex-item"> <%= donation.created_at%></p>
     </div>
   <%end%>
 </div>
