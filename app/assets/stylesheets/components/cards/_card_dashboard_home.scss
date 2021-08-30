@@ -1,8 +1,28 @@
 .card-dashboard-home {
-  width: 100vw;
+  // width: 100vw;
   background-color: $dark_blue;
-  padding: 1.5rem 2rem;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+  border-radius: 1rem;
+  margin-bottom: 20px;
+  .box-infos-home {
+    text-align: -webkit-left;
+  }
+  .secondary_information {
+    margin: 0;
+  }
 
+  .d-flex {
+    padding: 12px 15px;
+
+
+
+  }
+
+  p {
+    font-weight: bold;
+  }
 
   .price-home {
 

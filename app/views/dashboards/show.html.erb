@@ -3,16 +3,20 @@
     <div>
       <h1>Hi <span class="pink"> <%= current_user.first_name %> </span></h1>
       <h2>Welcome home</h2>
-    </div><div class="avatar"></div>
-    <p class="information">My donation</p>
+      <p class="information">My donation</p>
+    </div>
+    <div class="avatar">
+     <%=image_tag current_user.avatar, class: "show-avatar"%>
+    </div>
   </div>
   <%@donations.each do |donation|%>
     <div class="card-dashboard-home">
       <div class="d-flex justify-content-between align-items-center">
-        <div>
-          <h1 class="title-home flex-item"> <%= donation.nonprofit.name%> Nature </h1>
-          <h2 class="subtitle-home flex-item"> <%= donation.nonprofit.sub_category%> Animal</h2>
-          <p class="price-home flex-item"> <%= donation.nonprofit.sub_category%> Price</p>
+        <div class="box-infos-home">
+          <h1 class="title-home flex-item"> <%= donation.nonprofit.name%></h1>
+          <h2 class="subtitle-home flex-item"> <%= donation.nonprofit.sub_category%></h2>
+          <p class="price-home flex-item"> <%= donation.amount%> €</p>
+          <p class="secondary_information flex-item"> <%= donation.display_date%></p>
         </div>
         <div class="picture-home flex-item">
           <%= image_tag url_for(donation.nonprofit.photo) %>

@@ -1,5 +1,5 @@
 class DonationSessionsController < ApplicationController
-  before_action :set_donation_session, only: [ :edit]
+  before_action :set_donation_session, only: [ :edit, :update]
 
 
   def create
@@ -17,6 +17,10 @@ class DonationSessionsController < ApplicationController
   end
 
   def update
+    params["amount-by-nonprofit-id"].each do |amount_by_nonprofit|
+      donation = Donation.new(donation_session: @donation_session, nonprofit_id: amount_by_nonprofit.first, amount: amount_by_nonprofit.last)
+      donation.save!
+    end
     redirect_to user_root_path
   end
 

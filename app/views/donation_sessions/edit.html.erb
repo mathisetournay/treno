@@ -3,7 +3,10 @@
     <div>
       <h1>Hi <span class="pink"> <%= current_user.first_name %> </span></h1>
       <h2>Welcome home</h2>
-    </div><div class="avatar"></div>
+    </div>
+    <div class="avatar">
+     <%=image_tag current_user.avatar, class: "show-avatar"%>
+    </div>
   </div>
 
   <div class= remaining-budget>
@@ -25,7 +28,7 @@
           <p> <%= donation.nonprofit.name %> </p>
           <div class="donation-case">
             <%= f.input :amount,
-                        input_html: {name: "amount[nonprofit-id-#{donation.nonprofit.id}][]", type: :number, placeholder: "8" } %>
+                        input_html: {name: "amount-by-nonprofit-id[#{donation.nonprofit.id}]", type: :number, placeholder: "8" } %>
           </div>
         </div>
       </div>

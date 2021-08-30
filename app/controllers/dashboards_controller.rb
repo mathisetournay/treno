@@ -3,6 +3,7 @@ class DashboardsController < ApplicationController
 
   def show
     # raise
-    @donations = Donation.where(user: current_user)
+    user_donation_sessions = DonationSession.where(user: current_user)
+    @donations = Donation.where(donation_session: user_donation_sessions).order(amount: :desc)
   end
 end
