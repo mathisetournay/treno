@@ -4,32 +4,25 @@
   background-size: cover;
   border-radius: 1rem;
 
-  img {
-    filter: grayscale(20%);
-  }
+  .category-infos{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    padding: .5rem;
 
-    .category-infos{
-      width: 100%;
-      height: 100%;
-      display: grid;
-      padding: .5rem;
+    .position-title-category {
+      align-items: center;
+      place-self: center;
+      margin: 0 auto;
+      text-align: center;
 
-      .position-title-category {
-        align-items: center;
-        place-self: center;
-        margin: 0 auto;
-        text-align: center;
-
-        h1 {
-          margin: 0;
-          font-style: normal;
-          font-weight: 800;
-          font-size: 16px;
-          line-height: 130%;
-        }
+      h1 {
+        margin: 0;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 130%;
       }
-
+    }
   }
-
-
 }
