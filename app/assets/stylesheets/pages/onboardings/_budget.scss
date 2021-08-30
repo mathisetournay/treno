@@ -29,24 +29,30 @@
     border-radius: 20px;
     align-items: center;
     height: 3rem;
+    color: #495057;
 
     .string {
-      color: $blue;
-      padding-left: 8px;
-      width: 240px;
-      padding-top: 6px;
+      padding-left: 25px;
+      margin-bottom: 0;
     }
+
     .form-control {
-      width: 60px;
+      max-width: 6rem;
+      width: 5rem;
       text-align: end;
-      border-radius: 20px;
+      border-radius: 50px;
       border: 0px solid transparent;
+      margin-left: 5.5rem;
+
+      &:focus {
+        box-shadow: none;
+      }
     }
   }
 
   .input {
     width: 320px;
-    text-align: end;
+    text-align: start;
     #user_donnation_budget {
       text-align: right;
     }
@@ -56,6 +62,7 @@
     display: flex;
     align-content: space-between;
     border-radius: 20px;
+
     .wide {
       width: 256px;
     }
@@ -63,17 +70,22 @@
 
   .donation_suggestions {
     border-radius: 20px;
-    display: flex;
+    display: grid;
     justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    margin-top: 1rem;
+
     .money {
       width: 100%;
-      border-radius: 20px;
+      border-radius: 10px;
       color: $blue;
-      padding: 5px 13px;
+      padding: .5rem;
       background-color: $grey;
       font-weight: 700;
       text-align: center;
     }
+
   }
 
   .footer-position {

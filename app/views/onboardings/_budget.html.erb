@@ -10,9 +10,9 @@
     <%= image_tag "components_treno/rechercher.png" %>
 
     <%= f.input :donation_budget,
-                label: false,
-                placeholder: "your donation",
-                input_html: { value: 8, data:  { budget_target: "input" } }%>
+                label: "Your donation",
+                required: false,
+                input_html: { value: 8, data:  { budget_target: "input" } } %>
 
     <div class="donation_cost">
       <p class="wide secondary_information">The real cost of your donation</p>
@@ -21,6 +21,7 @@
 
     <div class="donation_suggestions">
       <span class="money" data-action="click->budget#setBudget" data-budget="5">5€</span>
+      <span class="money" data-action="click->budget#setBudget" data-budget="10">10€</span>
       <span class="money" data-action="click->budget#setBudget" data-budget="20">20€</span>
       <span class="money" data-action="click->budget#setBudget" data-budget="50">50€</span>
       <span class="money" data-action="click->budget#setBudget" data-budget="100">100€</span>
