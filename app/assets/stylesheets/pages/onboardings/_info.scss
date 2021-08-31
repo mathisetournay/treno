@@ -3,11 +3,8 @@
 }
 
 .info {
-  padding: 5rem 1rem;
-  padding-left: 17px;
-  padding-right: 17px;
   padding-top: 30px;
-  padding-bottom: 30px;
+  position: relative;
 
   .content-position {
   background-color: #11629F;
@@ -38,9 +35,4 @@
       font-weight: 500;
     }
   }
-
-  .footer-position {
-    margin-top: 6.5rem;
-  }
-
 }

@@ -3,15 +3,8 @@
 }
 
 .registration {
-  padding: 5rem 1rem;
-  padding-left: 17px;
-  padding-right: 17px;
   padding-top: 30px;
-  padding-bottom: 30px;
-
-  .footer-position {
-    margin-top: 10rem;
-  }
+  position: relative;
 
   .picture {
     margin-top: 2rem;
@@ -20,7 +13,6 @@
       padding-left: 25px;
     }
   }
-
 
   .pswd {
     margin-top: 2rem;
@@ -44,7 +36,6 @@
   margin-bottom: 0px;
   padding-left: 25px;
   }
-
 }
 
 .email .input-name {
@@ -55,8 +46,6 @@
   margin-top: 0.5rem;
 }
 
-
-
 .password .input-name {
   margin-top: 0.5rem;
 }
@@ -66,7 +55,7 @@
 }
 
 .form-inputs {
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .registration .password {

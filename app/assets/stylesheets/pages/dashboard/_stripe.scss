@@ -1,14 +1,52 @@
 .stripe-container {
-
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 
+
   .validation {
     width: 60%;
     height: 60%;
+  }
 
+  .image-validation {
+    margin-bottom: 1.5rem;
+  }
+
+  .title-validation {
+    margin-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+
+    h1 {
+      background: linear-gradient(90deg, $pink 16.25%, $yellow 89%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 5rem;
+    }
+  }
+
+  .message {
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .grid-btn {
+    display: grid;
+    place-content: center;
+    width: auto;
+    margin: 0 1rem;
+
+    p {
+      margin-bottom: 0 !important;
+
+      .fa-arrow-alt-circle-right {
+        margin-left: .75rem;
+        font-size: 1.3rem;
+      }
+    }
   }
 }
