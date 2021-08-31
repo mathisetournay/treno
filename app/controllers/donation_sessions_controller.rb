@@ -1,7 +1,6 @@
 class DonationSessionsController < ApplicationController
   before_action :set_donation_session, only: [ :edit, :update]
 
-
   def create
     @donation_session = DonationSession.new(user: current_user)
     @donation_session.save!
@@ -21,7 +20,8 @@ class DonationSessionsController < ApplicationController
       donation = Donation.new(donation_session: @donation_session, nonprofit_id: amount_by_nonprofit.first, amount: amount_by_nonprofit.last)
       donation.save!
     end
-    redirect_to user_root_path
+    # redirect_to user_root_path
+    redirect_to payment_path
   end
 
   private

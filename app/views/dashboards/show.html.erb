@@ -11,15 +11,16 @@
   </div>
   <%@donations.each do |donation|%>
     <div class="card-dashboard-home">
-      <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex justify-content-between">
         <div class="box-infos-home">
           <h1 class="title-home flex-item"> <%= donation.nonprofit.name%></h1>
           <h2 class="subtitle-home flex-item"> <%= donation.nonprofit.sub_category%></h2>
-          <p class="price-home flex-item"> <%= donation.amount%> €</p>
+
           <p class="secondary_information flex-item"> <%= donation.display_date%></p>
         </div>
         <div class="picture-home flex-item">
           <%= image_tag url_for(donation.nonprofit.photo) %>
+          <p class="price-home flex-item"> <%= donation.amount%> €</p>
         </div>
       </div>
     </div>
