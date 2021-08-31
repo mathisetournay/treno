@@ -11,6 +11,10 @@ class User < ApplicationRecord
 
   validate :favorite_sub_categories_is_in_list
 
+  def fullname
+    "#{first_name} #{last_name}"
+  end
+
   private
 
   def favorite_sub_categories_is_in_list
