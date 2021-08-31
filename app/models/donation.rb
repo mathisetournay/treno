@@ -24,7 +24,7 @@ class Donation < ApplicationRecord
       modifications: [
         {
           name: "subcategory_image",
-          image_url: nonprofit_subcategory_logo_url
+          image_url: nonprofit_logo_url
         },
         {
           name: "nonprofit_logo",
@@ -32,7 +32,7 @@ class Donation < ApplicationRecord
         },
         {
           name: "text",
-          inner_html: "This certificate attests that #{currentUser.user_fullname} has made a donation to the nonprofit #{donation.nonprofit.name}."
+          text: "This certificate attests that #{user_fullname} has made a donation to the nonprofit #{nonprofit_name}."
         }
       ]
     }

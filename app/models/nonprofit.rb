@@ -3,13 +3,13 @@ class Nonprofit < ApplicationRecord
     "Environment" => ["Forest", "Ocean", "Global Warming", "Sensibilization", "Agriculture"],
     "Animals" => ["Birds", "Bees", "Animals Shelters", "Biodiversity", "Endangered Species"],
     "Solidarity" => ["Homeless", "Elderly People", "Disability", "Orphans", "Refugees"],
-    "Culture" => ["Architecture", "Theater", "Gastronomy", "Patrimony", "Museum"],
-    "Health" => ["Hospitals", "Mental health", "Malnutrition", "Water access", "Diseases"],
-    "Humanitarian" => ["Refugees", "Education", "Poverty", "Orphans"],
-    "Living Together" => ["Handicapted integration", "Gender equality", "Anti-Racism", "Discrimination"],
-    "Sport" => ["Sport access", "Handisports", "Integration through sport", "Inclusivity", "Women sport promotion"],
-    "Employment" => ["Employment access", "Formations", "Equals employment opportunity ", "Disability"],
-    "Education" => ["Education access", "Alphabetisation", "Education for disabled"]
+    "Culture" => [], #["Architecture", "Theater", "Gastronomy", "Patrimony", "Museum"],
+    "Health" => [], #["Hospitals", "Mental health", "Malnutrition", "Water access", "Diseases"],
+    "Humanitarian" => [], #["Refugees", "Education", "Poverty", "Orphans"],
+    "Living Together" => [], #["Handicapted integration", "Gender equality", "Anti-Racism", "Discrimination"],
+    "Sport" => [], #["Sport access", "Handisports", "Integration through sport", "Inclusivity", "Women sport promotion"],
+    "Employment" => [], #["Employment access", "Formations", "Equals employment opportunity ", "Disability"],
+    "Education" => [], #["Education access", "Alphabetisation", "Education for disabled"]
   }
   has_one_attached :photo
 
