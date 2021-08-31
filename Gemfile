@@ -37,6 +37,7 @@ gem 'simple_form'
 gem 'cloudinary', '~> 1.16.0'
 
 gem "httparty"
+gem "down"
 
 group :development, :test do
   gem 'pry-byebug'
