@@ -13,9 +13,10 @@
     <div class="card-dashboard-home">
       <div class="d-flex justify-content-between">
         <div class="box-infos-home">
-          <h1 class="title-home flex-item"> <%= donation.nonprofit.name%></h1>
-          <h2 class="subtitle-home flex-item"> <%= donation.nonprofit.sub_category%></h2>
-
+          <div>
+            <p class="title-home flex-item"> <%= donation.nonprofit.name%></p>
+            <h2 class="subtitle-home flex-item"> <%= donation.nonprofit.sub_category%></h2>
+          </div>
           <p class="secondary_information flex-item"> <%= donation.display_date%></p>
         </div>
         <div class="picture-home flex-item">
@@ -28,8 +29,9 @@
 </div>
 
 
-<div class="user-menu-grid">
+<div id="menu"class="user-menu-grid">
   <%= image_tag "nav_bar_components/home-52.png"%>
-  <%= image_tag "nav_bar_components/gift-2.png"%>
-  <%= image_tag "nav_bar_components/view_carousel.png"%>
+  <%= link_to nonprofits_path(favorite_sub_categories) do %>
+    <%= image_tag "nav_bar_components/view_carousel.png"%>
+  <% end %>
 </div>

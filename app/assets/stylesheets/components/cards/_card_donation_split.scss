@@ -4,17 +4,24 @@
   p {
     margin-right: 10px;
   }
+
   h2 {
     font-size: 24px;
+    flex-grow: 1;
+    text-align: center;
   }
 }
+
 .actual-donation {
   display: flex;
-
   margin-bottom: 20px;
+
   p{
     margin-right: 100px;
+  }
 
+  h2 {
+    font-weight: bold;
   }
 }
 
@@ -42,7 +49,7 @@
       width: 80px;
       height: 80px;
       // background-position: center;
-      // background-size: cover;
+      background-color: white;
       border-radius: 10px;
     }
 
