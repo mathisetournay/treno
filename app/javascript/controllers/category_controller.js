@@ -10,13 +10,14 @@ function loadCategories() {
 }
 
 function parseCategoriesElement () {
-  console.log(parseCategoriesElement)
   const categoriesElement = document.getElementById('onboardingForm');
+  const nonProfits = document.getElementById('non_profits');
 
-  // if (categoriesElement) {
+  if (nonProfits) {
+      return []
+  } else {
     return JSON.parse(categoriesElement.dataset.categories);
-  // }
-  // return []
+  }
 }
 
 export default class extends Controller {
@@ -24,7 +25,6 @@ export default class extends Controller {
   static targets = loadCategories();
 
   setCategory(event) {
-    console.log(event)
     parseCategoriesElement().forEach( cat => {
       const display = this[`${cat}DisplayTarget`]
       const selector = this[`${cat}SelectorTarget`]
