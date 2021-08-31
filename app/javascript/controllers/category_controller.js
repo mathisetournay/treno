@@ -4,15 +4,18 @@ import { Controller } from "stimulus"
 function loadCategories() {
   const categoriesElement = parseCategoriesElement()
 
-  if (categoriesElement) {
-    return categoriesElement.map(category => {
-      return [`${category}Display`, `${category}Selector`];
-    }).flat()
-  }
+  return categoriesElement.map(category => {
+    return [`${category}Display`, `${category}Selector`];
+  }).flat()
 }
 
 function parseCategoriesElement () {
-  return JSON.parse(document.getElementById('onboardingForm').dataset.categories);
+  const categoriesElement = document.getElementById('onboardingForm');
+
+  if (categoriesElement) {
+    return JSON.parse(categoriesElement.dataset.categories);
+  }
+  return []
 }
 
 export default class extends Controller {

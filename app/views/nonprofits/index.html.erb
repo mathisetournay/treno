@@ -7,26 +7,25 @@
         <h2>Welcome home</h2>
       </div>
       <div class="avatar">
-      <%=image_tag current_user.avatar, class: "show-avatar"%>
+        <%=image_tag current_user.avatar, class: "show-avatar"%>
       </div>
     </div>
 
     <%= simple_form_for :donation_sessions, url: :donation_sessions do |f| %>
       <%= f.input :nonprofits,
-                        as: :check_boxes,
-                        input_html: { class: "tag-selector" },
-                        item_wrapper_class: "tag-item-2",
-                        collection: @nonprofits,
-                        include_blank: "Anything",
-                        wrapper_html: {class: "form-group" },
-                        include_hidden: false,
-                        input_html: { data: {action: "click->nonprofits#count", "nonprofits-target".to_sym => "selector"}, name: "nonprofits[]", multiple: true, class: "uncheckedboxes tag-selector"},
-                        label_method: lambda { |nonprofit| render 'nonprofits', nonprofit: nonprofit }%>
+                  as: :check_boxes,
+                  input_html: { class: "tag-selector" },
+                  item_wrapper_class: "tag-item-2",
+                  collection: @nonprofits,
+                  include_blank: "Anything",
+                  wrapper_html: {class: "form-group" },
+                  include_hidden: false,
+                  input_html: { data: {action: "click->nonprofits#count", "nonprofits-target".to_sym => "selector"}, name: "nonprofits[]", multiple: true, class: "uncheckedboxes tag-selector"},
+                  label_method: lambda { |nonprofit| render 'nonprofits', nonprofit: nonprofit } %>
 
-  </div>
-                        <div class="user-banner-donation" data-nonprofits-target="donationBanner" hidden>
-                          <h1><%= f.button :submit, "Donate", data: {"nonprofits-target".to_sym => "total"}%></h1>
-
-                        </div>
+      <div class="user-banner-donation" data-nonprofits-target="donationBanner" hidden>
+        <h1><%= f.button :submit, "Donate", data: { "nonprofits-target".to_sym => "total" } %></h1>
+      </div>
     <%end%>
+  </div>
 </div>
