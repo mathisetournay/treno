@@ -3,19 +3,21 @@
 }
 
 .name {
-  padding: 5rem 1rem;
-  padding-left: 17px;
-  padding-right: 17px;
   padding-top: 30px;
-  padding-bottom: 30px;
+  position: relative;
 
-  .footer-position {
-  margin-top: 29rem;
+  .content-position {
+    margin-top: 3.5rem;
   }
 
+  .btn-1-regist {
+    bottom: 4rem;
+  }
   p {
-  text-align: center;
-  padding-top: 0.8rem;
+    text-align: center;
+    padding-top: 0.8rem;
+    position: absolute;
+    bottom: 1rem;
+    width: -webkit-fill-available;
   }
-
 }

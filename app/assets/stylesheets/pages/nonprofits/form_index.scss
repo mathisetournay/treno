@@ -1,7 +1,13 @@
 .col-form-label {
-  font-size: 0;
-}
+  color: $green;
+  font-weight: bolder;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
 
+  abbr {
+    display: none;
+  }
+}
 
 .tag-item-2 {
   display: inline-block;
@@ -19,7 +25,6 @@
     display: inline-block;
     border: .5rem solid transparent;
   }
-
 
   .tag-selector:checked + label .asso-infos {
     border: .5rem solid #4DBEA3;

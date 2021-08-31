@@ -6,6 +6,6 @@ export default class extends Controller {
   connect() {
     setTimeout(() => {
       this.nextTarget.click()
-    }, 2000)
+    }, 3000)
   }
 }

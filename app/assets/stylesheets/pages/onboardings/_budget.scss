@@ -3,11 +3,7 @@
 }
 
 .budget {
-  padding: 5rem 1rem;
-  padding-left: 17px;
-  padding-right: 17px;
   padding-top: 30px;
-  padding-bottom: 30px;
   position: relative;
 
   .content-position {
@@ -53,6 +49,7 @@
   .input {
     width: 320px;
     text-align: start;
+
     #user_donnation_budget {
       text-align: right;
     }
@@ -86,9 +83,5 @@
       text-align: center;
     }
 
-  }
-
-  .footer-position {
-    margin-top: 10rem;
   }
 }

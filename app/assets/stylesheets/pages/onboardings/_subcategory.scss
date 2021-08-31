@@ -4,20 +4,35 @@
   padding-bottom: 1rem;
 }
 
-.subcategory {
-  // background-color: green;
-  .subcategory-wrapper {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+.sub_category {
+  padding-top: 30px;
+  position: relative;
+}
 
+.sub_category {
   .subcategories-wrapper {
     display: flex;
     flex-wrap: nowrap;
     overflow: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .scrollable-sub {
+    overflow: scroll;
+    height: 36rem;
+  }
+
+  .form-group {
+    margin-bottom: 0 !important;
   }
 
   .tag-item.subcategory .card-category {
-    height: 150px;
+    height: 140px;
+  }
+
+  .btn {
+    margin-top: 2rem;
   }
 }

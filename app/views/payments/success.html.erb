@@ -1,7 +1,21 @@
 <div class="stripe-container">
   <div class="message" >
-    <%= image_tag('stripe.png', class: "validation")%>
-    <p> Paiement accepté  </p>
+    <div class="image-validation">
+      <%= image_tag('components_treno/soutenir.png', class: "validation")%>
+    </div>
+
+    <div>
+      <p> Donation received<span class='ml-2'>✅ </span></p>
+    </div>
+
+    <div class="title-validation">
+      <h1>You're now a new Treno player </h1>
+    </div>
+
+    <div class="btn btn-secondary grid-btn">
+      <%= link_to root_path do %>
+        <p>See my donations <i class="far fa-arrow-alt-circle-right"></i></p>
+      <% end %>
+    </div>
   </div>
-  <%= link_to "See my donations", root_path %>
 </div>

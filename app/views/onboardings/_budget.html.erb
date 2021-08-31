@@ -1,12 +1,8 @@
 <div id="budget" class="divsize budget" data-controller="budget">
-
   <div>
     <h1><span class="pink" data-name-target="firstName"></span>&nbsp tell us your budget</h1>
   </div>
-
-
   <div class="content-position">
-
     <%= image_tag "components_treno/rechercher.png" %>
 
     <%= f.input :donation_budget,
@@ -27,11 +23,8 @@
       <span class="money" data-action="click->budget#setBudget" data-budget="100">100€</span>
       <span class="money" data-action="click->budget#setBudget" data-budget="500">500€</span>
     </div>
-
   </div>
-
   <div class="footer-position">
-    <%= link_to "Continue", "#registration", data: {turbolinks: false}, class: "btn btn-1" %>
+    <%= link_to "Continue", "#registration", data: {turbolinks: false}, class: "btn btn-1-regist" %>
   </div>
-
 </div>
