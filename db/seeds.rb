@@ -9,9 +9,9 @@
 # Initialisation seeds
 
 puts "Clear DB"
-Nonprofit.destroy_all
-DonationSession.destroy_all
 Donation.destroy_all
+DonationSession.destroy_all
+Nonprofit.destroy_all
 User.destroy_all
 
 # Creation Nonprofits
