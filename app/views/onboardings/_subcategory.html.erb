@@ -7,7 +7,7 @@
                   legend_tag: false,
                   collection: charity_type.last,
                   include_blank: "Anything",
-                  wrapper_html: { data: { "category-target".to_sym => "#{charity_type.first.delete(' ').camelize(:lower)}Display" }, class: 'form-group subcategories-wrapper', hidden: true, id: "#{charity_type.first.parameterize}-display" },
+                  wrapper_html: { data: { "category-target": "#{charity_type.first.delete(' ').camelize(:lower)}Display" }, class: 'form-group subcategories-wrapper', hidden: true, id: "#{charity_type.first.parameterize}-display" },
                   as: :check_boxes,
                   include_hidden: false,
                   input_html: {name: "user[favorite_sub_categories][]", multiple: true, class: "uncheckedboxes tag-selector"},

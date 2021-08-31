@@ -14,7 +14,7 @@
                   include_blank: "Anything",
                   wrapper_html: { class: 'form-group grid' },
                   as: :check_boxes,
-                  include_hidden: false,
+                  include_hidden: true,
                   input_html: { data: { action: "click->category#setCategory"}, name: "categories[]", multiple: true, class: "uncheckedboxes tag-selector" },
                   item_wrapper_class: "tag-item",
                   label_method: lambda { |category| render 'cardcategorie', category: category }

@@ -11,11 +11,21 @@
   }
   .secondary_information {
     margin: 0;
+    margin-top: 1rem;
   }
 
   .d-flex {
     padding: 12px 15px;
 
+    .title-home {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .subtitle-home {
+      font-size: 18px;
+      margin: 0;
+    }
 
 
   }
@@ -30,7 +40,7 @@
     background: $pink_to_yellow_text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
     font-size: 24px;
   }
 
@@ -41,6 +51,9 @@
     img  {
       width: 70px;
       height: 70px;
+      background-color: white;
+      border-radius: 10px;
+      margin-bottom: 1rem;
     }
 
 

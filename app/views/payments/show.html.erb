@@ -1,0 +1,8 @@
+<div class="stripe-container" data-controller="payment">
+  <div class="message" data-dashboards-target="loader">
+    <%= image_tag('stripe.png', class: "validation")%>
+    <p> Payment loading ⏳ </p>
+  </div>
+
+  <%= link_to "go to success", success_payment_path, data: { payment_target: "next" }, class: "d-none" %>
+</div>

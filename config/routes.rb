@@ -14,6 +14,12 @@ Rails.application.routes.draw do
   #   resources :new
   # end
 
+  resource :payment, only: [:show] do
+    member do
+      get :success
+    end
+  end
+
   resource :onboarding, only: [:new, :create]
 
   resources :nonprofits, only: [:show, :index]
