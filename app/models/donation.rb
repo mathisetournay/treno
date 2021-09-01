@@ -29,6 +29,10 @@ class Donation < ApplicationRecord
         {
           name: "nonprofit_logo",
           image_url: nonprofit_logo_url
+        },
+        {
+          name: "text",
+          text: "This certificate attests that #{user_fullname} has made a donation to the nonprofit #{nonprofit_name}."
         }
       ]
     }
