@@ -1,5 +1,5 @@
 meta_product_name: "Treno"
 meta_title: "Treno - A new way to do good deeds"
 meta_description: "Treno is a plateform where you can see different charities and give money to help them!"
-meta_image: "group_164.png" # should exist in `app/assets/images/`
+meta_image: "thumbail.png" # should exist in `app/assets/images/`
 twitter_account: "@jointreno"   # required for Twitter Cards
