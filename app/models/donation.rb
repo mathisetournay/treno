@@ -16,7 +16,7 @@ class Donation < ApplicationRecord
     # gather information
     nonprofit_name     = nonprofit.name
     nonprofit_logo_url = ApplicationController.helpers.cloudinary_url(nonprofit.photo.key)
-    sub_category_image = ApplicationController.helpers.asset_url(nonprofit.sub_category_image_path, host: "https://www.treno.top/")
+    sub_category_image = ApplicationController.helpers.asset_url(nonprofit.sub_category_image_path, host: ENV['HOST'])
     user_fullname      = user.fullname
     payload = {
       template: ENV['BANNER_TEMPLATE_ID'],
@@ -34,7 +34,7 @@ class Donation < ApplicationRecord
           text: "This certificate attests that #{user_fullname} has made a donation to the nonprofit #{nonprofit_name}."
         }
       ],
-      webhook_url: "http://1c73-2a01-cb05-8956-ac00-d807-21c3-feca-cd8f.ngrok.io/banner_bear_webhooks"
+      webhook_url: "#{ENV['HOST']}/banner_bear_webhooks"
     }
     # send request to banner bear
     response = HTTParty.post('https://api.bannerbear.com/v2/images',
