@@ -1,12 +1,10 @@
 <div class="general-container">
   <div class="avatar-grid">
     <div>
-      <h1>Hi <span class="pink"> <%= current_user.first_name %> </span></h1>
+      <h1>Hi <span class="pink"> <%= current_user.first_name.capitalize %> </span></h1>
       <h2>Welcome home</h2>
-      <p class="information">My donation</p>
-      <p class="information"> <%= @total_amount %></p>
-       <p class="information"> <%= @user_annual_budget %></p>
-        <p class="information"> <%= @remaining_budget %></p>
+      <p class="mb-1">You donated <span class="pink"><%= @total_amount %></span> € on your annual budget of <span class="pink"><%= @user_annual_budget %></span> €
+      <p>You have <span class="pink"><%= 13 - Date.today.month %></span> months left to donate <span class="pink"><%= @remaining_budget %></span> € </p></p>
     </div>
     <div class="avatar">
      <%=image_tag current_user.avatar, class: "show-avatar"%>
@@ -16,13 +14,15 @@
     <div class="card-dashboard-home">
       <div class="d-flex justify-content-between">
         <div class="box-infos-home">
-          <% if donation.sharing_card.present? %>
-            <%= link_to "partager", donation.facebook_share_link %>
-          <% end %>
           <div>
             <p class="title-home flex-item"> <%= donation.nonprofit.name%></p>
             <h2 class="subtitle-home flex-item"> <%= donation.nonprofit.sub_category%></h2>
           </div>
+          <% if donation.sharing_card.present? %>
+            <%= link_to donation.facebook_share_link do %>
+              <i class="fab fa-facebook"></i>
+            <% end %>
+          <% end %>
           <p class="secondary_information flex-item"> <%= donation.display_date%></p>
         </div>
         <div class="picture-home flex-item">
