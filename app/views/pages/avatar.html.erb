@@ -4,6 +4,6 @@
     <h2>Welcome home</h2>
   </div>
   <div>
-    <%=image_tag current_user.avatar, class: "show-avatar"%>
+    <%= cl_image_tag current_user.avatar.key, class: "show-avatar"%>
   </div>
 <div>
