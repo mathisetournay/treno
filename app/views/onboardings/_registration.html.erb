@@ -5,7 +5,7 @@
   <div class="content position"></div>
     <div class="form-inputs">
       <div class="email">
-        <p>💌 What's your email?</p>
+        <p><i class="far fa-envelope"></i> What's your email?</p>
           <%= f.input :email,
                       label: false,
                       required: true,
@@ -14,11 +14,14 @@
                       input_html: { autocomplete: "email", class: "input-name pl-4" }%>
       </div>
       <div class="picture">
-        <p>📸 Choose your best picture:</p>
-        <%= f.input :avatar, as: :file, label: false, class: "pic-uploader" %>
+        <p><i class="fas fa-camera"></i> Choose your best picture:</p>
+        <label for="user_avatar">
+          <span class="btn btn-secondary" style="width: 150% padding: 22,4px">Choose an avatar</span>
+        </label>
+        <%= f.input :avatar, as: :file, label: false, input_html: { hidden: true } %>
       </div>
       <div class="pswd">
-          <p>🔑 Choose a password:</p>
+          <p><i class="fas fa-key"></i> Choose a password:</p>
           <%= f.input :password,
                     label: false,
                     required: true,
@@ -27,7 +30,7 @@
                     input_html: { autocomplete: "new-password", class: "input-name pl-4" } %>
       </div>
       <div class="confirmation">
-          <p>🔐 Password confirmation:</p>
+          <p><i class="fas fa-lock"></i> Password confirmation:</p>
           <%= f.input :password_confirmation,
                       label: false,
                       placeholder: "********",
