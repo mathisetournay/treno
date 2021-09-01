@@ -4,7 +4,7 @@
     <div class="avatar-grid">
       <div>
         <h1>Hi <span class="pink"> <%= current_user.first_name %> </span></h1>
-        <h2>Welcome home</h2>
+        <h2>Let’s see your monthly ! </h2>
       </div>
       <div class="avatar">
         <%=image_tag current_user.avatar, class: "show-avatar"%>
@@ -23,16 +23,15 @@
                   input_html: { data: {action: "click->nonprofits#count", "nonprofits-target".to_sym => "selector"}, name: "nonprofits[]", multiple: true, class: "uncheckedboxes tag-selector"},
                   label_method: lambda { |nonprofit| render 'nonprofits', nonprofit: nonprofit } %>
 
-</div>
       <div class="user-menu-grid-np">
-      <i class="fas fa-home"></i>
-      <%= link_to "nonprofits" do %>
+        <%= link_to root_path do %>
+          <i class="fas fa-home"></i>
+        <% end %>
         <i class="fas fa-book-open"></i>
-      <% end %>
-    </div>
+      </div>
       <div class="user-banner-donation" data-nonprofits-target="donationBanner" hidden>
         <%= f.button :submit, "Donate", data: { "nonprofits-target".to_sym => "total" } %>
       </div>
     <%end%>
-
   </div>
+</div>

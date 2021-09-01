@@ -89,8 +89,12 @@
   display: flex;
   justify-content: space-around;
   background-color: $navy;
-  position: sticky;
-  bottom: 0;
+  position: fixed;
+  bottom: 0rem;
+  height: fit-content;
+  width: -webkit-fill-available;
+  left: 0;
+
   .fa-home:before {
     color: white;
     font-size: 35px;
