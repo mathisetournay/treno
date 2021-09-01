@@ -4,27 +4,26 @@ class Donation < ApplicationRecord
 
   has_one :user, through: :donation_session
 
+  has_one_attached :sharing_card
+
+  after_create :generate_sharing_card
+
   def display_date
     created_at.strftime("%m/%d/%Y at %I:%M%p")
   end
 
   def generate_sharing_card
-    # gather informations
-    # nonprofit name
-    nonprofit_name = nonprofit.name
-    # nonprofit logo
+    # gather information
+    nonprofit_name     = nonprofit.name
     nonprofit_logo_url = ApplicationController.helpers.cloudinary_url(nonprofit.photo.key)
-    # category image
     sub_category_image = ApplicationController.helpers.asset_url(nonprofit.sub_category_image_path, host: "https://www.treno.top/")
-    # user fullname
-    user_fullname = user.fullname
-    # build payload
+    user_fullname      = user.fullname
     payload = {
       template: ENV['BANNER_TEMPLATE_ID'],
       modifications: [
         {
           name: "subcategory_image",
-          image_url: nonprofit_logo_url
+          image_url: sub_category_image
         },
         {
           name: "nonprofit_logo",
@@ -34,7 +33,8 @@ class Donation < ApplicationRecord
           name: "text",
           text: "This certificate attests that #{user_fullname} has made a donation to the nonprofit #{nonprofit_name}."
         }
-      ]
+      ],
+      webhook_url: "http://1c73-2a01-cb05-8956-ac00-d807-21c3-feca-cd8f.ngrok.io/banner_bear_webhooks"
     }
     # send request to banner bear
     response = HTTParty.post('https://api.bannerbear.com/v2/images',
@@ -46,14 +46,5 @@ class Donation < ApplicationRecord
     update(sharing_card_api_id: image_id)
 
     return response
-  end
-
-  def sharing_card_url
-    return unless sharing_card_api_id
-
-    response = HTTParty.get("https://api.bannerbear.com/v2/images/#{sharing_card_api_id}",
-      headers: { "Authorization" => "Bearer #{ENV['BANNER_BEAR_API_KEY']}" },
-    )
-    response['image_url']
   end
 end
