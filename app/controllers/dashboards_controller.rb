@@ -11,6 +11,5 @@ class DashboardsController < ApplicationController
     @total_amount = @donations.count(:amount)
     @user_annual_budget = current_user.donation_budget
     @remaining_budget = @user_annual_budget - @total_amount
-
   end
 end
