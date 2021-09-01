@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   has_one_attached :avatar
 
-  validate :favorite_sub_categories_is_in_list
+  # validate :favorite_sub_categories_is_in_list
 
   def fullname
     "#{first_name} #{last_name}"

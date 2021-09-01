@@ -83,3 +83,29 @@
     }
   }
 }
+
+.user-menu-grid-np {
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-around;
+  background-color: $navy;
+  position: fixed;
+  bottom: 0rem;
+  height: fit-content;
+  width: -webkit-fill-available;
+  left: 0;
+
+  .fa-home:before {
+    color: white;
+    font-size: 35px;
+
+  }
+  .fa-book-open:before {
+
+    background: linear-gradient(90deg, $pink 16.25%, $yellow 89%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-size: 35px;
+
+  }
+}
