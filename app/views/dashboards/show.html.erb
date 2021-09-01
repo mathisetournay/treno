@@ -13,6 +13,9 @@
     <div class="card-dashboard-home">
       <div class="d-flex justify-content-between">
         <div class="box-infos-home">
+          <% if donation.sharing_card.present? %>
+            <%= link_to "partager", donation.facebook_share_link %>
+          <% end %>
           <div>
             <p class="title-home flex-item"> <%= donation.nonprofit.name%></p>
             <h2 class="subtitle-home flex-item"> <%= donation.nonprofit.sub_category%></h2>

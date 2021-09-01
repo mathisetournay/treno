@@ -16,7 +16,7 @@ class Donation < ApplicationRecord
     # gather information
     nonprofit_name     = nonprofit.name
     nonprofit_logo_url = ApplicationController.helpers.cloudinary_url(nonprofit.photo.key)
-    sub_category_image = ApplicationController.helpers.asset_url(nonprofit.sub_category_image_path, host: ENV['HOST'])
+    sub_category_image = ApplicationController.helpers.asset_url(nonprofit.sub_category_image_path)
     user_fullname      = user.fullname
     payload = {
       template: ENV['BANNER_TEMPLATE_ID'],
@@ -46,5 +46,10 @@ class Donation < ApplicationRecord
     update(sharing_card_api_id: image_id)
 
     return response
+  end
+
+  def facebook_share_link
+    sharing_card_url = ApplicationController.helpers.cloudinary_url(sharing_card.key)
+    "https://www.facebook.com/sharer/sharer.php?u=#{sharing_card_url}&amp;src=sdkpreparse"
   end
 end
