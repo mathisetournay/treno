@@ -13,6 +13,7 @@
 
     <%= simple_form_for :donation_sessions, url: :donation_sessions do |f| %>
       <%= f.input :nonprofits,
+                  legend_tag: false,
                   as: :check_boxes,
                   input_html: { class: "tag-selector" },
                   item_wrapper_class: "tag-item-2",

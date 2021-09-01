@@ -8,7 +8,7 @@ class DashboardsController < ApplicationController
 
     user_donation_sessions = DonationSession.where(user: current_user)
     @donations = Donation.where(donation_session: user_donation_sessions).order(amount: :desc)
-    @total_amount = @donations.count(:amount)
+    @total_amount = @donations.sum(:amount)
     @user_annual_budget = current_user.donation_budget
     @remaining_budget = @user_annual_budget - @total_amount
   end
