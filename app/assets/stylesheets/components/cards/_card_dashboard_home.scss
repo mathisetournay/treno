@@ -63,3 +63,19 @@
     }
   }
 }
+
+.user-menu-grid {
+  .fa-home:before {
+    background: linear-gradient(90deg, $pink 16.25%, $yellow 89%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 35px;
+
+  }
+  .fa-book-open:before {
+    color: white;
+    font-size: 35px;
+
+  }
+
+}
