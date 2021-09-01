@@ -16,7 +16,7 @@ class Donation < ApplicationRecord
     # gather information
     nonprofit_name     = nonprofit.name
     nonprofit_logo_url = ApplicationController.helpers.cloudinary_url(nonprofit.photo.key)
-    sub_category_image = ApplicationController.helpers.image_url(nonprofit.sub_category_image_path, host: "https://#{ENV['HOST']}")
+    sub_category_image = ApplicationController.helpers.image_url(nonprofit.sub_category_image_path, host: ENV['HOST'])
     user_fullname      = user.fullname
     payload = {
       template: ENV['BANNER_TEMPLATE_ID'],
