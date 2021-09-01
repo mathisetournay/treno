@@ -4,8 +4,9 @@
     <h2 class="mb-4">Make your choice!</h2>
     <div class="scrollable-sub">
       <% @sub_categories_by_category.each do |charity_type| %>
+        <p class="text-sub-cat" hidden data-category-target="<%= "#{charity_type.first.delete(' ').camelize(:lower)}Label" %>"><%= charity_type.first %></p>
         <%= f.input charity_type.first.to_sym,
-          legend_tag: true,
+          legend_tag: false,
           collection: charity_type.last,
           include_blank: "Anything",
           wrapper_html: { data: { "category-target": "#{charity_type.first.delete(' ').camelize(:lower)}Display" }, class: 'form-group subcategories-wrapper', hidden: true, id: "#{charity_type.first.parameterize}-display" },

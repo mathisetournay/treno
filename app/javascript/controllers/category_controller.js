@@ -5,7 +5,7 @@ function loadCategories() {
   const categoriesElement = parseCategoriesElement()
 
   return categoriesElement.map(category => {
-    return [`${category}Display`, `${category}Selector`];
+    return [`${category}Display`, `${category}Selector`, `${category}Label`];
   }).flat()
 }
 
@@ -30,6 +30,8 @@ export default class extends Controller {
       const selector = this[`${cat}SelectorTarget`]
       const checkedSelector = selector.parentNode.previousSibling.checked
 
+      const label = this[`${cat}LabelTarget`]
+      label.hidden = !checkedSelector
       return display.hidden = !checkedSelector
     })
   };
