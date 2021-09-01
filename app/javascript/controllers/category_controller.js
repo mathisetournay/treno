@@ -11,11 +11,11 @@ function loadCategories() {
 
 function parseCategoriesElement () {
   const categoriesElement = document.getElementById('onboardingForm');
-  const nonProfits = document.getElementById('non_profits');
+  const nonProfits        = document.getElementById('non_profits');
 
   if (nonProfits) {
-      return []
-  } else {
+    return []
+  } else if (categoriesElement) {
     return JSON.parse(categoriesElement.dataset.categories);
   }
 }
