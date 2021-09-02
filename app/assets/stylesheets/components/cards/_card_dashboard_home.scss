@@ -1,11 +1,14 @@
-.avatar-grid {
-  p {
-    font-weight: bold;
+.general-container {
+  margin-bottom: 6rem;
+
+  .avatar-grid {
+    p {
+      font-weight: bold;
+
+    }
 
   }
-
-}
-.phrases-resume {
+  .phrases-resume {
   p{
     font-weight: bold;
   }
@@ -79,6 +82,7 @@
       margin-bottom: 0 !important;
     }
   }
+}
 }
 
 .user-menu-grid {
