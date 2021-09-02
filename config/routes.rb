@@ -28,5 +28,13 @@ Rails.application.routes.draw do
 
   resources :nonprofits, only: [:show, :index]
 
-  resources :donation_sessions, only: [:create, :edit, :update]
+  resource :payment, only: [] do
+    member do
+      get :success
+    end
+  end
+
+  resources :donation_sessions, only: [:create, :edit, :update] do
+    resources :payments, only: [:new]
+  end
 end

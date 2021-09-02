@@ -15,13 +15,30 @@ class DonationSessionsController < ApplicationController
     end
   end
 
-  def update
-    params["amount-by-nonprofit-id"].each do |amount_by_nonprofit|
-      donation = Donation.new(donation_session: @donation_session, nonprofit_id: amount_by_nonprofit.first, amount: amount_by_nonprofit.last)
-      donation.save!
+  def update # rubocop:disable Metrics/MethodLength
+    donations = params["amount-by-nonprofit-id"].to_unsafe_h.map do |amount_by_nonprofit|
+      Donation.create!(donation_session: @donation_session, nonprofit_id: amount_by_nonprofit.first, amount: amount_by_nonprofit.last)
     end
-    # redirect_to user_root_path
-    redirect_to payment_path
+
+    line_items = donations.map do |donation|
+      {
+        name: donation.nonprofit.name,
+        # images: [teddy.photo_url],
+        amount: donation.amount * 100,
+        currency: 'eur',
+        quantity: 1
+      }
+    end
+
+    session = Stripe::Checkout::Session.create(
+      payment_method_types: ['card'],
+      line_items: line_items,
+      success_url: success_payment_url,
+      cancel_url: success_payment_url
+    )
+
+    @donation_session.update(stripe_checkout_session_id: session.id)
+    redirect_to new_donation_session_payment_path(@donation_session)
   end
 
   private
