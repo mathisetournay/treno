@@ -16,27 +16,33 @@
 
   <div class= actual-donation>
     <p>Your current donation :</p>
-    <h2 data-donation-sessions-target="total"> 0 €</h2>
+    <h2 data-donation-sessions-target="total"> <%= @donation_session.total_amount %> €</h2>
   </div>
 
   <%= simple_form_for :donation_sessions, url: donation_session_path(@donation_session), method: :patch  do |f| %>
-    <%@donations.each do |donation|%>
-
+    <%@donation_session.donations.each do |donation|%>
       <div class="list-asso">
         <div class="donation-grid">
           <%= image_tag url_for(donation.nonprofit.photo) %>
           <p> <%= donation.nonprofit.name %> </p>
           <div class="donation-case">
             <%= f.input :amount,
-                        input_html: { data: {action: "input->donation-sessions#count", "donation-sessions-target".to_sym => "selector"}, name: "amount-by-nonprofit-id[#{donation.nonprofit.id}]", type: :number, placeholder: "8" } %>
+                        disabled: true,
+                        input_html: { value: "#{donation.amount} €" }, type: :text %>
           </div>
         </div>
       </div>
     <%end %>
-
-      <%= f.button :submit, "Validate", class: "btn btn-1 mt-5" %>
-
-
+    <button id="pay" class="mt-5 btn-block w-100 btn btn-secondary mt-5">Give <%= @donation_session.total_amount %>€</button>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+      const paymentButton = document.getElementById('pay');
+      paymentButton.addEventListener('click', () => {
+        const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+        stripe.redirectToCheckout({
+          sessionId: '<%= @donation_session.stripe_checkout_session_id %>'
+        });
+      });
+    </script>
   <% end %>
-
 </div>
