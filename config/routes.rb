@@ -14,17 +14,19 @@ Rails.application.routes.draw do
   #   resources :new
   # end
 
-  resource :payment, only: [:show] do
-    member do
-      get :success
-    end
-  end
-
   resource :banner_bear_webhooks, only: :create
 
   resource :onboarding, only: [:new, :create]
 
   resources :nonprofits, only: [:show, :index]
 
-  resources :donation_sessions, only: [:create, :edit, :update]
+  resource :payment, only: [] do
+    member do
+      get :success
+    end
+  end
+
+  resources :donation_sessions, only: [:create, :edit, :update] do
+    resources :payments, only: [:new]
+  end
 end

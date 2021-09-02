@@ -1,5 +1,6 @@
 class PaymentsController < ApplicationController
-  def show
+  def new
+    @donation_session = DonationSession.find(params[:donation_session_id])
   end
 
   def success
