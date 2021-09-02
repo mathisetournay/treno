@@ -5,9 +5,10 @@
   background-color: $navy;
   position: fixed;
   bottom: 0rem;
-  height: fit-content;
+  height: auto;
   width: -webkit-fill-available;
   left: 0;
+  padding-bottom: 1.5rem ;
   img {
     width: 35px;
     height: 35px;
