@@ -13,7 +13,6 @@ class Donation < ApplicationRecord
   end
 
   def generate_sharing_card
-    return
     # gather information
     nonprofit_name     = nonprofit.name
     nonprofit_logo_url = ApplicationController.helpers.cloudinary_url(nonprofit.photo.key)
