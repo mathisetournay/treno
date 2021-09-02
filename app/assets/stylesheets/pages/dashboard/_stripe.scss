@@ -29,10 +29,22 @@
   }
 
   .message {
+    &.stripe-logo {
+      background-color: white;
+      margin: 0 2rem;
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: -9px 10px 4px -3px rgba(37, 37, 37, 0.61);
+      & p {
+        color: $blue_gray;
+      }
+    }
     p {
       font-size: 18px;
+      font-weight: bold;
     }
     .fa-hourglass-half {
+      animation: stripe-loading 1.5s infinite;
       color: #5469d4;
     }
   }
@@ -51,5 +63,14 @@
         font-size: 1.3rem;
       }
     }
+  }
+}
+
+@keyframes stripe-loading {
+  from {
+    tranform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

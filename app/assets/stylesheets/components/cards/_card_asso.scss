@@ -5,7 +5,7 @@
 }
 
 .card-asso {
-  height: -webkit-fill-available;
+  // height: -webkit-fill-available;
 
   .asso-infos {
     width: 100%;
@@ -91,9 +91,10 @@
   background-color: $navy;
   position: fixed;
   bottom: 0rem;
-  height: fit-content;
+  height: auto;
   width: -webkit-fill-available;
   left: 0;
+  padding-bottom: 1.5rem ;
 
   .fa-home:before {
     color: white;
