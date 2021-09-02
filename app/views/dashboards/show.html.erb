@@ -3,12 +3,15 @@
     <div>
       <h1>Hi <span class="pink"> <%= current_user.first_name.capitalize %> </span></h1>
       <h2>Welcome home</h2>
-      <p class="mb-1">You donated <span class="pink"><%= @total_amount %></span> € on your annual budget of <span class="pink"><%= @user_annual_budget %></span> €
-      <p>You have <span class="pink"><%= 13 - Date.today.month %></span> months left to donate <span class="pink"><%= @remaining_budget %></span> € </p></p>
     </div>
     <div class="avatar">
      <%= cl_image_tag current_user.avatar.key, class: "show-avatar"%>
     </div>
+  </div>
+  <div class="phrases-resume">
+    <p class="mb-1">You donated <span class="pink"><%= @total_amount %></span> €</p>
+    <p class="mb-1">On your annual budget of <span class="pink"><%= @user_annual_budget %></span> €
+    <p>You have <span class="pink"><%= 13 - Date.today.month %></span> months left to donate <span class="pink"><%= @remaining_budget %></span> € </p></p>
   </div>
   <%@donations.each do |donation|%>
     <div class="card-dashboard-home">
