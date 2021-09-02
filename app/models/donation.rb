@@ -51,7 +51,6 @@ class Donation < ApplicationRecord
 
   def facebook_share_link
     sharing_card_url = ApplicationController.helpers.cloudinary_url(sharing_card.key)
-    # "https://www.facebook.com/sharer/sharer.php?u=#{sharing_card_url}&amp;src=sdkpreparse"
-    "https://twitter.com/intent/tweet?text=Hello%20world"
+    "https://www.facebook.com/sharer/sharer.php?u=#{sharing_card_url}&amp;src=sdkpreparse"
   end
 end
