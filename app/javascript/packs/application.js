@@ -28,7 +28,9 @@ import "controllers";
 
 // Internal imports, e.g:
 import { initSwiper } from '../plugins/init_swiper';
+import { initDownloadImg } from "../components/download_img"
 
 document.addEventListener('turbolinks:load', () => {
   initSwiper();
+  initDownloadImg();
 });

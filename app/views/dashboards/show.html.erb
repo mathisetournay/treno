@@ -23,11 +23,12 @@
           </div>
           <div class="d-flex p-0">
             <% if donation.sharing_card.present? %>
-              <%= link_to "donation.facebook_share_link", target: "_blank", class: "mr-3" do %>
-                  <i class="fab fa-facebook"></i>
-              <% end %>
-              <%= link_to cl_image_path(donation.sharing_card.key), target: "_blank", class: "mr-2" do %>
+              <%#= link_to "donation.facebook_share_link", target: "_blank", class: "mr-3" do %>
+                  <%# <i class="fab fa-facebook"></i> %>
+              <%# end %>
+              <%= link_to donation_path(donation) do %>
                 <i class="fas fa-link"></i>
+                <span>certificate</span>
               <% end %>
             <% end %>
           </div>

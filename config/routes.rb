@@ -20,6 +20,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :donations, only: [:show]
+
   resource :banner_bear_webhooks, only: :create
 
   resource :onboarding, only: [:new, :create]

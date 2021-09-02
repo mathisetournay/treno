@@ -4,9 +4,11 @@ import { Controller } from "stimulus"
 function loadCategories() {
   const categoriesElement = parseCategoriesElement()
 
-  return categoriesElement.map(category => {
-    return [`${category}Display`, `${category}Selector`, `${category}Label`];
-  }).flat()
+  if (categoriesElement && categoriesElement.length) {
+    return categoriesElement.map(category => {
+      return [`${category}Display`, `${category}Selector`, `${category}Label`];
+    }).flat()
+  }
 }
 
 function parseCategoriesElement () {

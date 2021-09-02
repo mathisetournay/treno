@@ -1,0 +1,15 @@
+<div class="container">
+  <div>
+    <% if @donation.sharing_card.present? %>
+      <%= cl_image_tag(@donation.sharing_card.key) %>
+      <%= link_to "Download your certificate",
+                  cl_image_tag(@donation.sharing_card.key),
+                  class: "download-link btn btn-1",
+                  id: "donation_certificate",
+                  data: {
+                    img_url: cl_image_tag(@donation.sharing_card.key),
+                    img_filename: "sharing_card"
+                  } %>
+    <% end %>
+  </div>
+</div>
