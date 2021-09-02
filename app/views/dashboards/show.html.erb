@@ -18,11 +18,16 @@
             <p class="title-home flex-item"> <%= donation.nonprofit.name%></p>
             <h2 class="subtitle-home flex-item"> <%= donation.nonprofit.sub_category%></h2>
           </div>
-          <% if donation.sharing_card.present? %>
-            <%= link_to donation.facebook_share_link do %>
-              <i class="fab fa-facebook"></i>
+          <div class="d-flex p-0">
+            <% if donation.sharing_card.present? %>
+              <%= link_to "donation.facebook_share_link", target: "_blank", class: "mr-3" do %>
+                  <i class="fab fa-facebook"></i>
+              <% end %>
+              <%= link_to cl_image_path(donation.sharing_card.key), target: "_blank", class: "mr-2" do %>
+                <i class="fas fa-link"></i>
+              <% end %>
             <% end %>
-          <% end %>
+          </div>
           <p class="secondary_information flex-item"> <%= donation.display_date%></p>
         </div>
         <div class="picture-home flex-item">

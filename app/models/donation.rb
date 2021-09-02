@@ -13,6 +13,7 @@ class Donation < ApplicationRecord
   end
 
   def generate_sharing_card
+    return
     # gather information
     nonprofit_name     = nonprofit.name
     nonprofit_logo_url = ApplicationController.helpers.cloudinary_url(nonprofit.photo.key)
@@ -50,6 +51,7 @@ class Donation < ApplicationRecord
 
   def facebook_share_link
     sharing_card_url = ApplicationController.helpers.cloudinary_url(sharing_card.key)
-    "https://www.facebook.com/sharer/sharer.php?u=#{sharing_card_url}&amp;src=sdkpreparse"
+    # "https://www.facebook.com/sharer/sharer.php?u=#{sharing_card_url}&amp;src=sdkpreparse"
+    "https://twitter.com/intent/tweet?text=Hello%20world"
   end
 end
