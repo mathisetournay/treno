@@ -8,6 +8,7 @@ class BannerBearWebhooksController < ApplicationController
       image     = Down.download(params['image_url_jpg'])
 
       @donation.sharing_card.attach(io: image, filename: "sharing_card.jpg")
+      @donation.save
     else
       head :unauthorized
     end
