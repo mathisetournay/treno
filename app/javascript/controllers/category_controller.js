@@ -1,7 +1,6 @@
 import { Controller } from "stimulus"
 
 
-
 function parseCategoriesElement () {
   const categoriesElement = document.getElementById('onboardingForm');
   const nonProfits        = document.getElementById('non_profits');
