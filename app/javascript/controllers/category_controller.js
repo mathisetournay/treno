@@ -4,12 +4,14 @@ import { Controller } from "stimulus"
 function loadCategories() {
   const categoriesElement = parseCategoriesElement()
 
-  if (categoriesElement) {
+  // if (categoriesElement) {
+
     return categoriesElement.map(category => {
       return [`${category}Display`, `${category}Selector`, `${category}Label`];
     }).flat()
-  }
+  // }
 }
+
 
 function parseCategoriesElement () {
   const categoriesElement = document.getElementById('onboardingForm');
