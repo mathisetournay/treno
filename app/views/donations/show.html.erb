@@ -7,7 +7,7 @@
                   class: "download-link btn btn-1",
                   id: "donation_certificate",
                   data: {
-                    img_url: cl_image_tag(@donation.sharing_card.key),
+                    img_url: cl_image_path(@donation.sharing_card.key),
                     img_filename: "sharing_card"
                   } %>
     <% end %>
