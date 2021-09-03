@@ -1,6 +1,7 @@
 import { Controller } from "stimulus"
 
 
+
 function loadCategories() {
   const categoriesElement = parseCategoriesElement()
 
