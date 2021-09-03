@@ -1,17 +1,6 @@
 import { Controller } from "stimulus"
 
 
-
-function loadCategories() {
-  const categoriesElement = parseCategoriesElement()
-
-  if (categoriesElement) {
-    return categoriesElement.map(category => {
-      return [`${category}Display`, `${category}Selector`, `${category}Label`];
-    }).flat()
-  }
-}
-
 function parseCategoriesElement () {
   const categoriesElement = document.getElementById('onboardingForm');
   const nonProfits        = document.getElementById('non_profits');
@@ -25,15 +14,15 @@ function parseCategoriesElement () {
 
 export default class extends Controller {
 
-  static targets = loadCategories();
+  static targets = []
 
   setCategory(event) {
-    parseCategoriesElement().forEach( cat => {
-      const display = this[`${cat}DisplayTarget`]
-      const selector = this[`${cat}SelectorTarget`]
+    parseCategoriesElement().forEach(cat => {
+      const display = this[`${cat}DisplayTarget`] || document.querySelector(`[data-category-target="${cat}Display"]`);
+      const selector = this[`${cat}SelectorTarget`] || document.querySelector(`[data-category-target="${cat}Selector"]`);
       const checkedSelector = selector.parentNode.previousSibling.checked
 
-      const label = this[`${cat}LabelTarget`]
+      const label = this[`${cat}LabelTarget`] || document.querySelector(`[data-category-target="${cat}Label"]`);
       label.hidden = !checkedSelector
       return display.hidden = !checkedSelector
     })
